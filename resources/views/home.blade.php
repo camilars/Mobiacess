@@ -7,6 +7,8 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
+                <a class="btn btn-primary" href="{{action('UserController@create')}}">Adicionar locais acessíveis</a>
+
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -14,7 +16,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Você está logado!
                 </div>
             </div>
         </div>
