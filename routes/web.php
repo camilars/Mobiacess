@@ -12,12 +12,17 @@
 */
 Route::resource('users','UserController');
 
+Route::resource('accessibles','AccessibleController');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
+
+Route::get('/accessibles', 'AccessibleController@index');
+Route::get('/accessibles/create', 'AccessibleController@create');
 
 Auth::routes();
 

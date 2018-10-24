@@ -340,6 +340,7 @@ class ComposerStaticInitf47a78afcb2bc7a06a30098088de7c86
     );
 
     public static $classMap = array (
+        'App\\Accessible' => __DIR__ . '/../..' . '/app/Accessible.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

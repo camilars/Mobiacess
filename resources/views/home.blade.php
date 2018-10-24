@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
-                <a class="btn btn-primary" href="{{action('UserController@create')}}">Adicionar locais acessíveis</a>
+                <a class="btn btn-primary" href="{{action('UserController@create')}}">Cadastro do Usuário</a>
 
                 <div class="card-body">
                     @if (session('status'))
