@@ -8,6 +8,7 @@
                 <div class="card-header">Dashboard</div>
 
                 <a class="btn btn-primary" href="{{action('UserController@create')}}">Cadastro do Usuário</a>
+                <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastro da Acessibilidade</a>
 
                 <div class="card-body">
                     @if (session('status'))

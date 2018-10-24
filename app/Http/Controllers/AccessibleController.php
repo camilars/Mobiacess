@@ -81,7 +81,7 @@ class AccessibleController extends Controller
         $accessible->titulo=$request->get('titulo');
         $accessible->descricao=$request->get('descricao');
         $accessible->save();
-        return redirect('accessible');
+        return redirect('accessibles');
     }
 
     /**

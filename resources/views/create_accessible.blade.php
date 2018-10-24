@@ -17,13 +17,6 @@
         @csrf
         <div class="row">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <label for="id">Id:</label>
-            <input type="id" class="form-control" name="id">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="titulo">Tilulo:</label>
               <input type="text" class="form-control" name="titulo">
