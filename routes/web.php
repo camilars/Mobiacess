@@ -14,6 +14,8 @@ Route::resource('users','UserController');
 
 Route::resource('accessibles','AccessibleController');
 
+Route::resource('locals','LocalController');
+
 Route::get('/', function () {
     return view('welcome');
 });
