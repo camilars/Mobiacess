@@ -5,11 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Inicio</div>
 
                 <!-- <a class="btn btn-primary" href="{{action('UserController@create')}}">Cadastro do Usuário</a> -->
 <!--                 <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastro da Acessibilidade</a>
- -->                <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastro do Local</a>
+ -->                <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                    <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastrar Acessibilidade</a>
 
 
                 <div class="card-body">

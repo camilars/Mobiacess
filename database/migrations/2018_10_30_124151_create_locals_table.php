@@ -22,7 +22,7 @@ class CreateLocalsTable extends Migration
             $table->string('state');
             $table->string('cep');
             $table->string('reference');
-            $table->string('filename');
+            $table->string('foto');
             $table->timestamps();
         });
     }

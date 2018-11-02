@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Criar Registro</a>
+      <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastrar Acessibilidade</a>
     <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -35,7 +35,7 @@
           <form action="{{action('AccessibleController@destroy', $accessible['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Delete</button>
+            <button class="btn btn-danger" type="submit">Deletar</button>
           </form>
         </td>
       </tr>

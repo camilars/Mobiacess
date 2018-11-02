@@ -14,7 +14,7 @@ class AccessibleController extends Controller
     public function index()
     {
         $accessibles=\App\Accessible::all();
-        return view('index_accessible',compact('accessibles'));
+        return view('accessible/index_accessible',compact('accessibles'));
     }
 
     /**
@@ -24,7 +24,7 @@ class AccessibleController extends Controller
      */
     public function create()
     {
-        return view('create_accessible');
+        return view('accessible/create_accessible');
     }
 
     /**
@@ -64,7 +64,7 @@ class AccessibleController extends Controller
     public function edit($id)
     {
         $accessible = \App\Accessible::find($id);
-        return view('edit_accessible',compact('accessible','id'));
+        return view('accessible/edit_accessible',compact('accessible','id'));
     }
 
     /**

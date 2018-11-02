@@ -14,7 +14,7 @@ class LocalController extends Controller
     public function index()
     {
        $locals=\App\Local::all();
-        return view('index_local',compact('locals'));
+        return view('local/index_local',compact('locals'));
     }
 
     /**
@@ -24,7 +24,7 @@ class LocalController extends Controller
      */
     public function create()
     {
-        return view('create_local');
+        return view('local/create_local');
     }
 
     /**
@@ -35,9 +35,9 @@ class LocalController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasfile('filename'))
+        if($request->hasfile('foto'))
          {
-            $file = $request->file('filename');
+            $file = $request->file('foto');
             $name=time().$file->getClientOriginalName();
             $file->move(public_path().'/images/', $name);
          }
@@ -49,7 +49,7 @@ class LocalController extends Controller
         $local->state=$request->get('state');
         $local->cep=$request->get('cep');
         $local->reference=$request->get('reference');
-        $local->filename=$name;
+        $local->foto=$name;
         $local->save();
         
         return redirect('locals')->with('success', 'Information has been added');
@@ -75,7 +75,7 @@ class LocalController extends Controller
     public function edit($id)
     {
         $local = \App\Local::find($id);
-        return view('edit_local',compact('local','id'));
+        return view('local/edit_local',compact('local','id'));
     }
 
     /**
@@ -95,7 +95,7 @@ class LocalController extends Controller
         $local->state=$request->get('state');
         $local->cep=$request->get('cep');
         $local->reference=$request->get('reference');
-        // $local->filename=$name;
+        $local->foto=$name;
         $local->save();
         return redirect('locals');
     }

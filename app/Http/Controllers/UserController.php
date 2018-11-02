@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $users=\App\User::all();
-        return view('index_user',compact('users'));
+        return view('user/index_user',compact('users'));
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-         return view('create_user');
+         return view('user/create_user');
     }
 
     /**
@@ -65,7 +65,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = \App\User::find($id);
-        return view('edit_user',compact('user','id'));
+        return view('user/edit_user',compact('user','id'));
     }
 
     /**

@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <a class="btn btn-primary" href="{{action('UserController@create')}}">Criar Registro</a>
+      <a class="btn btn-primary" href="{{action('UserController@create')}}">Cadastrar Usuário</a>
     <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -35,7 +35,7 @@
           <form action="{{action('UserController@destroy', $user['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Delete</button>
+            <button class="btn btn-danger" type="submit">Deletar</button>
           </form>
         </td>
       </tr>
