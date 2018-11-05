@@ -22,6 +22,15 @@
             <input type="text" class="form-control" name="NameOfLocal">
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+            <label for="Cep">Cep:</label>
+            <input type="text" class="form-control" name="cep">
+          </div>
+        </div>
+        
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
@@ -63,14 +72,6 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-            <label for="Cep">Cep:</label>
-            <input type="text" class="form-control" name="cep">
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
             <label for="Reference">Ponto de Referência:</label>
             <input type="text" class="form-control" name="reference">
           </div>
@@ -93,10 +94,6 @@
             <input type="checkbox" name="elevador" value="elevador">Elevador<br>
             <input type="checkbox" name="corrimao" value="corrimao">Corrimão<br>
             <input type="checkbox" name="nenhuma" value="nenhuma"> Nenhuma acessibilidade<br>
-
-            <label for="Reference">Outros:</label>
-
-            <input type="text" class="form-control" name="reference">
           </div>
         </div>
 
@@ -108,22 +105,5 @@
         </div>
       </form>
     </div>
-    <script type="text/javascript">  
-        $(document).ready( function() {
-      function readURL(input) {
-        if (input.filename && input.filename[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            $('#img-upload').attr('src', e.target.result);
-          }
-          reader.readAsDataURL(input.filename[0]);
-        }
-      }
-      $("#imgInp").change(function(){
-        readURL(this);
-      });   
-    });
-  
-    </script>
   </body>
 </html>

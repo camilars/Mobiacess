@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <h2>Edit A Form</h2><br  />
+      <h2>Editar local</h2><br  />
         <form method="post" action="{{action('LocalController@update', $id)}}">
         @csrf
         <input name="_method" type="hidden" value="PATCH">

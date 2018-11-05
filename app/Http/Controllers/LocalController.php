@@ -41,6 +41,8 @@ class LocalController extends Controller
             $name=time().$file->getClientOriginalName();
             $file->move(public_path().'/images/', $name);
          }
+         $acessibilidade = '';
+
         $local= new \App\Local;
         $local->NameOfLocal=$request->get('NameOfLocal');
         $local->street=$request->get('street');
@@ -48,6 +50,19 @@ class LocalController extends Controller
         $local->city=$request->get('city');
         $local->state=$request->get('state');
         $local->cep=$request->get('cep');
+        if (!empty($request->get('rampa'))) {
+            $acessibilidade .= $request->get('rampa') . ",";
+        }
+        if (!empty($request->get('corrimao'))) {
+            $acessibilidade .= $request->get('corrimao') . ",";
+        }
+        if (!empty($request->get('elevador'))) {
+            $acessibilidade .= $request->get('elevador') . ",";
+        }
+        if (!empty($request->get('nenhuma'))) {
+            $acessibilidade = $request->get('nenhuma');
+        }
+        $local->acessibilidade = $acessibilidade;
         $local->reference=$request->get('reference');
         $local->foto=$name;
         $local->save();

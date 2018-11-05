@@ -24,7 +24,8 @@
         <th>Estado</th>
         <th>Cep</th>
         <th>Ponto de Referência</th>
-        <th>foto</th>
+        <th>Foto</th>
+        <th>Acessibilidade</th>
         <th>Outros</th>
 
         <th colspan="2">Action</th>
@@ -43,6 +44,7 @@
         <td>{{$local['cep']}}</td>
         <td>{{$local['reference']}}</td>
         <td><img src="/images/{{$local['foto']}}" style="width:50px; height:50px;  "></td>
+        <td>{{$local['acessibilidade']}}</td>
         <td><a href="{{action('LocalController@edit', $local['id'])}}" class="btn btn-warning">Editar</a></td>
         <td>
           <form action="{{action('LocalController@destroy', $local['id'])}}" method="post">

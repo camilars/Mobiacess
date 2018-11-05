@@ -23,6 +23,7 @@ class CreateLocalsTable extends Migration
             $table->string('cep');
             $table->string('reference');
             $table->string('foto');
+            $table->string('acessibilidade');
             $table->timestamps();
         });
     }
