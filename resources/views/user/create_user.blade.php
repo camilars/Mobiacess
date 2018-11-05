@@ -50,7 +50,7 @@
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="Cpf">CPF:</label>
-              <input type="text" class="form-control" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+              <input type="text" class="form-control" name="cpf" maxlength="14">
             </div>
           </div>
         <div class="row">

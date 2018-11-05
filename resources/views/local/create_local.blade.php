@@ -103,7 +103,7 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="Cep">Cep:</label>
-            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);">
+            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9">
           </div>
         </div>
         
