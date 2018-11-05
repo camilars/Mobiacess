@@ -18,11 +18,11 @@
     <thead>
       <tr>
         <th>Nome do Local</th>
+        <th>Cep</th>
         <th>Rua</th>
         <th>Bairro</th>
         <th>Cidade</th>
         <th>Estado</th>
-        <th>Cep</th>
         <th>Ponto de Referência</th>
         <th>Foto</th>
         <th>Acessibilidade</th>
@@ -37,13 +37,13 @@
       
       <tr>
         <td>{{$local['NameOfLocal']}}</td>
+        <td>{{$local['cep']}}</td>
         <td>{{$local['street']}}</td>
         <td>{{$local['burgh']}}</td>
         <td>{{$local['city']}}</td>
         <td>{{$local['state']}}</td>
-        <td>{{$local['cep']}}</td>
         <td>{{$local['reference']}}</td>
-        <td><img src="/images/{{$local['foto']}}" style="width:50px; height:50px;  "></td>
+        <td><img src="/images/{{$local['foto']}}" style="width:70px; height:70px;  "></td>
         <td>{{$local['acessibilidade']}}</td>
         <td><a href="{{action('LocalController@edit', $local['id'])}}" class="btn btn-warning">Editar</a></td>
         <td>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD Tutorial With Example </title>
+    <title>Laravel 5.6 CRUD</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
@@ -18,6 +18,13 @@
             <input type="text" class="form-control" name="NameOfLocal" value="{{$local->NameOfLocal}}">
           </div>
         </div>
+         <div class="row">
+          <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="number">Cep:</label>
+              <input type="text" class="form-control" name="cep" value="{{$local->cep}}">
+            </div>
+          </div>
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
@@ -46,14 +53,6 @@
             <div class="form-group col-md-4">
               <label for="number">Estado:</label>
               <input type="text" class="form-control" name="state" value="{{$local->state}}">
-            </div>
-          </div>
-
-          <div class="row">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="number">Cep:</label>
-              <input type="text" class="form-control" name="cep" value="{{$local->cep}}">
             </div>
           </div>
 
