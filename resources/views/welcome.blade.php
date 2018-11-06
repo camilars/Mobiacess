@@ -84,7 +84,6 @@
 
                 <div class="links">
                     <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastrar Local</a>
-                    <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastrar Acessibilidade</a>
                 </div>
             </div>
         </div>
