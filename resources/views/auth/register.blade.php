@@ -43,7 +43,7 @@ function _cpf(cpf) {
 function validarCPF(el){
   if( !_cpf(el.value) ){
  
-    alert("CPF inválido!" + el.value);
+    alert("CPF "+ el.value+" inválido!");
  
     // apaga o valor
     el.value = "";
@@ -84,6 +84,39 @@ function validarCPF(el){
 }
 </script>
 
+<script>
+function mask(e, id, mask){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58)){
+        mascara(id, mask);
+        return true;
+    } 
+    else{
+        if (tecla==11 || tecla==0){
+            mascara(id, mask);
+            return true;
+        } 
+        else  return false;
+    }
+}
+function mascara(id, mask){
+    var i = id.value.length;
+    var carac = mask.substring(i, i+1);
+    var prox_char = mask.substring(i+1, i+2);
+    if(i == 0 && carac != '#'){
+        insereCaracter(id, carac);
+        if(prox_char != '#')insereCaracter(id, prox_char);
+    }
+    else if(carac != '#'){
+        insereCaracter(id, carac);
+        if(prox_char != '#')insereCaracter(id, prox_char);
+    }
+    function insereCaracter(id, char){
+        id.value += char;
+    }
+}
+</script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -112,7 +145,7 @@ function validarCPF(el){
                             <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('Cpf') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required autofocus maxlength="11" onblur="validarCPF(this)">
+                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
 
                                 @if ($errors->has('cpf'))
                                     <span class="invalid-feedback" role="alert">
@@ -158,6 +191,8 @@ function validarCPF(el){
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                            
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -166,6 +201,7 @@ function validarCPF(el){
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

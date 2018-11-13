@@ -85,6 +85,39 @@
 
 </script>
 
+<script>
+function mask(e, id, mask){
+    var tecla=(window.event)?event.keyCode:e.which;   
+    if((tecla>47 && tecla<58)){
+        mascara(id, mask);
+        return true;
+    } 
+    else{
+        if (tecla==8 || tecla==0){
+            mascara(id, mask);
+            return true;
+        } 
+        else  return false;
+    }
+}
+function mascara(id, mask){
+    var i = id.value.length;
+    var carac = mask.substring(i, i+1);
+    var prox_char = mask.substring(i+1, i+2);
+    if(i == 0 && carac != '#'){
+        insereCaracter(id, carac);
+        if(prox_char != '#')insereCaracter(id, prox_char);
+    }
+    else if(carac != '#'){
+        insereCaracter(id, carac);
+        if(prox_char != '#')insereCaracter(id, prox_char);
+    }
+    function insereCaracter(id, char){
+        id.value += char;
+    }
+}
+</script>
+
   </head>
   <body>
     <div class="container">
@@ -103,7 +136,7 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="Cep">Cep:</label>
-            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9">
+            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9" onkeypress="return mask(event, this, '#####-###')">
           </div>
         </div>
         
@@ -156,6 +189,7 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
+            <label>Imagem do Local:</label>
             <input type="file" name="foto">    
 
             <img id='img-upload'/>
@@ -166,9 +200,9 @@
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="Reference">Acessibilidades:</label><br>
-            <input type="checkbox" name="rampa" value="rampa">Rampa<br>
-            <input type="checkbox" name="elevador" value="elevador">Elevador<br>
-            <input type="checkbox" name="corrimao" value="corrimao">Corrimão<br>
+            <input type="checkbox" name="rampa" value="rampa"> Rampa<br>
+            <input type="checkbox" name="elevador" value="elevador"> Elevador<br>
+            <input type="checkbox" name="corrimao" value="corrimao"> Corrimão<br>
             <input type="checkbox" name="nenhuma" value="nenhuma"> Nenhuma acessibilidade<br>
           </div>
         </div>
