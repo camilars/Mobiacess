@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD</title>
+    <title>Editar local</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
     <div class="container">
-      <h2>Editar local</h2><br  />
-        <form method="post" action="{{action('LocalController@update', $id)}}">
+      <br><h2><center>Editar local</center></h2><br/>
+        <form method="post" action="{{action('LocalController@update', $id)}}" enctype="multipart/form-data">
         @csrf
         <input name="_method" type="hidden" value="PATCH">
         <div class="row">
@@ -63,11 +63,17 @@
               <input type="text" class="form-control" name="reference" value="{{$local->reference}}">
             </div>
           </div>
-       
+          </div>
+          <div class="row">
+          <div class="col-md-4"></div>
+              <div class="form-group col-md-4">
+              <input type="file" name="foto" value="{{$local->foto}}">    
+            </div>
+          </div>
         <div class="row">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:60px">
-            <button type="submit" class="btn btn-success" style="margin-left:38px">Update</button>
+          <div class="form-group col-md-4" style="margin-top:20px">
+            <button type="submit" class="btn btn-success" style="margin-left:90px">Atualizar</button>
           </div>
         </div>
       </form>

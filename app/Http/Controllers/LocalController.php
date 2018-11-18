@@ -67,7 +67,7 @@ class LocalController extends Controller
         $local->foto=$name;
         $local->save();
         
-        return redirect('locals')->with('success', 'Information has been added');
+        return redirect('locals')->with('success', 'Cadastrado Local Com Sucesso');
     }
 
     /**
@@ -102,6 +102,12 @@ class LocalController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if($request->hasfile('foto'))
+         {
+            $file = $request->file('foto');
+            $name=time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
+         }
         $local= \App\Local::find($id);
         $local->NameOfLocal=$request->get('NameOfLocal');
         $local->street=$request->get('street');
@@ -110,7 +116,11 @@ class LocalController extends Controller
         $local->state=$request->get('state');
         $local->cep=$request->get('cep');
         $local->reference=$request->get('reference');
-        $local->foto=$name;
+        if (isset ($name)) {
+            
+            $local->foto=$name;
+
+        }
         $local->save();
         return redirect('locals');
     }
@@ -125,6 +135,6 @@ class LocalController extends Controller
     {
         $local = \App\Local::find($id);
         $local->delete();
-        return redirect('locals')->with('success','Information has been  deleted');
+        return redirect('locals')->with('success','Local Deletado Com Sucesso');
     }
 }

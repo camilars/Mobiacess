@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Index Page</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  </head>
-  <body>
+@extends('layouts.app')
+
+@section('content')
     <div class="container">
-      <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastrar Local</a>
-    <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
         <p>{{ \Session::get('success') }}</p>
@@ -58,5 +51,4 @@
     </tbody>
   </table>
   </div>
-  </body>
-</html>
+  @endsection

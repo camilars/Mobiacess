@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mobiacess</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">  
-    <script  data-src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-    
+@extends('layouts.app')
+
+@section('content')
     <script language="Javascript">
         function validacaoEmail(field) {
         usuario = field.value.substring(0, field.value.indexOf("@"));
@@ -33,12 +24,8 @@
 }
 }
 </script>
-  </head>
-
-  <body>
-
     <div class="container">
-      <h2>Cadastro de usuário</h2><br/>
+      <h2><center>Cadastro de usuário</center></h2><br/>
       <form method="post" action="{{url('users')}}" enctype="multipart/form-data" name="f1">
         @csrf
         <div class="row">
@@ -78,5 +65,4 @@
         </div>
       </form>
     </div>
-  </body>
-</html>
+  @endsection

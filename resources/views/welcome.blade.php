@@ -83,8 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastrar Local</a>
-                </div>
+    
             </div>
         </div>
     </body>

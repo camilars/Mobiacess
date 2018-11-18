@@ -3,12 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Formulário de Edição</title>
+    <title>Editar Usuário</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
     <div class="container">
-      <h2>Editar Formulário</h2><br  />
+      <br><h2><center>Editar Usuário</center></h2><br/>
         <form method="post" action="{{action('UserController@update', $id)}}">
         @csrf
         <input name="_method" type="hidden" value="PATCH">

@@ -42,7 +42,7 @@ class UserController extends Controller
         $user->password=$request->get('password');
         $user->save();
         
-        return redirect('users')->with('success', 'Information has been added');
+        return redirect('users')->with('success', 'Usuàrio Cadastrado Com Sucesso');
     }
 
     /**
@@ -96,6 +96,6 @@ class UserController extends Controller
     {
          $user = \App\User::find($id);
         $user->delete();
-        return redirect('users')->with('success','Information has been  deleted');
+        return redirect('users')->with('success','Usuário Deletado Com Sucesso');
     }
 }
