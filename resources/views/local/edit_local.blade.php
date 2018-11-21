@@ -64,19 +64,27 @@
             </div>
           </div>
           </div>
-          <div class="row">
+          <div class="row" style="margin-left:170px;">
           <div class="col-md-4"></div>
-              <div class="form-group col-md-4">
+            <div class="form-group col-md-4">
+              <label>Imagem do Local:</label></br>
               <input type="file" name="foto" value="{{$local->foto}}">    
             </div>
           </div>
-        <div class="row">
+        <div class="row" style="margin-left:284px">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:20px">
-            <button type="submit" class="btn btn-success" style="margin-left:90px">Atualizar</button>
-          </div>
+            <div class="form-group col-md-4" style="margin-top:60px">
+              <button type="submit" class="btn btn-success" ">Atualizar</button>
+            </div>
         </div>
+        <div class="row">
+          <div class="col-md-4">
+          <div class="form-group col-md-4" style="margin-top:-53px; margin-left:922px";>
+            <a href="{{action('LocalController@index')}}"><button type="submit"  class="btn btn-danger">Cancelar</button></a>
+          </div>
+      </div>
       </form>
+    </div>
     </div>
   </body>
 </html>

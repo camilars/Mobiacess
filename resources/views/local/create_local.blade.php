@@ -200,7 +200,15 @@ function mascara(id, mask){
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4" style="margin-top:20px">
-            <button type="submit" class="btn btn-success" style="margin-left:90px">Cadastrar</button>
+            <button type="submit" class="btn btn-success" style="margin-left:60px">Cadastrar</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4" style="margin-top:-52px; margin-left:300px">
+            <a href="{{action('LocalController@index')}}"><button type="submit"  class="btn btn-danger">Cancelar</button></a>
           </div>
         </div>
       </form>

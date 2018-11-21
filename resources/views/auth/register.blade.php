@@ -36,55 +36,7 @@ function _cpf(cpf) {
     return true;
 
 }
-</script>
 
-<script language="Javascript">
-
-function validarCPF(el){
-  if( !_cpf(el.value) ){
- 
-    alert("CPF "+ el.value+" inválido!");
- 
-    // apaga o valor
-    el.value = "";
-  }
-
-  else{
-
-    alert("CPF Valido!");
-
-    el.value;
-  }
-
-    
-}
-</script>
-
-<script language="Javascript">
-        function validacaoEmail(field) {
-        usuario = field.value.substring(0, field.value.indexOf("@"));
-        dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
- 
-        if ((usuario.length >=1) &&
-            (dominio.length >=3) && 
-            (usuario.search("@")==-1) && 
-            (dominio.search("@")==-1) &&
-            (usuario.search(" ")==-1) && 
-            (dominio.search(" ")==-1) &&
-            (dominio.search(".")!=-1) &&      
-            (dominio.indexOf(".") >=1)&& 
-            (dominio.lastIndexOf(".") < dominio.length - 1)) {
-            document.getElementById("msgemail").innerHTML="E-mail válido";
-            alert("E-mail valido");
-        }
-          else{
-            document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
-      alert("E-mail invalido");
-}
-}
-</script>
-
-<script>
 function mask(e, id, mask){
     var tecla=(window.event)?event.keyCode:e.which;   
     if((tecla>47 && tecla<58)){
@@ -114,6 +66,45 @@ function mascara(id, mask){
     function insereCaracter(id, char){
         id.value += char;
     }
+}
+
+</script>
+
+<script language="Javascript">
+
+function validarCPF(el){
+  if( !_cpf(el.value) ){
+ 
+    alert("CPF "+ el.value+" inválido!");
+ 
+    // apaga o valor
+    el.value = "";
+  }
+    
+}
+</script>
+
+<script language="Javascript">
+        function validacaoEmail(field) {
+        usuario = field.value.substring(0, field.value.indexOf("@"));
+        dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+ 
+        if ((usuario.length >=1) &&
+            (dominio.length >=3) && 
+            (usuario.search("@")==-1) && 
+            (dominio.search("@")==-1) &&
+            (usuario.search(" ")==-1) && 
+            (dominio.search(" ")==-1) &&
+            (dominio.search(".")!=-1) &&      
+            (dominio.indexOf(".") >=1)&& 
+            (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            document.getElementById("msgemail").innerHTML="E-mail válido";
+            alert("E-mail valido");
+        }
+          else{
+            document.getElementById("msgemail").innerHTML="<font color='red'>E-mail inválido </font>";
+      alert("E-mail invalido");
+}
 }
 </script>
 
@@ -194,14 +185,19 @@ function mascara(id, mask){
                             
                         
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0" style="margin-left: 80px;">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Cadastrar') }}
                                 </button>
                             </div>
                         </div>
-
+    
+                        <div class="form-group row mb-0" id="cancelar" style="margin-left: 250px; margin-top:-37px; ">
+                            <div class="col-md-6 offset-md-4">
+                                <a href="{{action('HomeController@index')}}" class="btn btn-danger">Cancelar</a>
+                            </div>    
+                        </div>
                     </form>
                 </div>
             </div>
