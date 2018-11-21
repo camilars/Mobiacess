@@ -12,14 +12,14 @@
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color:#111111;
-                color: #FF8C00;
+         /* html{
+                background-color:#DCC7AA;
+                color: #F7882F;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-            }
+            }*/
 
             .full-height {
                 height: 100vh;
@@ -44,13 +44,23 @@
             .content {
                 text-align: center;
             }
+          html{
 
+                background-image: url("/images/cadeirantess.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                background-size: 100% 100%;
+
+            
+            }
             .title {
                 font-size: 84px;
+                margin-left:360px;
             }
-
             .links > a {
-                color: #FF8C00;
+                color: #F7882F;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
