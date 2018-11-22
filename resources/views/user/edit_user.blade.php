@@ -42,10 +42,17 @@
           </div>
         <div class="row">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:60px">
-            <button type="submit" class="btn btn-success" style="margin-left:38px">Enviar</button>
+          <div class="form-group col-md-4" style="margin-top:30px">
+            <button type="submit" class="btn btn-success" style="margin-left:78px" onclick="return confirm('Atualizar os dados alterados?')">Atualizar</button>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-4">
+          <div class="form-group col-md-4" style="margin-top:-53px; margin-left:560px";>
+            <a href="{{action('LocalController@index')}}"><button type="submit"  class="btn btn-danger">Cancelar</button></a>
+          </div>
+      </div>
       </form>
     </div>
   </body>

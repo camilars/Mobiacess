@@ -1,6 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- <script>
+document.querySelector('#formulario').addEventListener('submit', function () {
+      $('#formulario').on('submit', function () {
+
+     var confirmado = confirm('Deseja deletar esses dados?');
+
+     if (! confirmado) return false;
+});
+});
+
+function funcao1()
+{
+
+var r = confirm("Tem certeza que deseja excluir este local?");
+if (r==true)
+  {
+  x="você pressionou OK!";
+  }
+else
+  {
+  return false;
+  }
+document.getElementById("demo").innerHTML=x;
+}
+</script> -->
+
     <div class="container">
     @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -28,7 +55,7 @@
           <form action="{{action('UserController@destroy', $user['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Deletar</button>
+            <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja excluir?')">Deletar</button>
           </form>
         </td>
       </tr>

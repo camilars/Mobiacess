@@ -74,7 +74,7 @@
         <div class="row" style="margin-left:284px">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4" style="margin-top:60px">
-              <button type="submit" class="btn btn-success" ">Atualizar</button>
+              <button type="submit" class="btn btn-success" onclick="return confirm('Atualizar os dados alterados?')">Atualizar</button>
             </div>
         </div>
         <div class="row">

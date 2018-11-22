@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
     @if (\Session::has('success'))
       <div class="alert alert-success">
@@ -43,7 +44,7 @@
           <form action="{{action('LocalController@destroy', $local['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit">Deletar</button>
+            <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja excluir?')">Deletar</button>
           </form>
         </td>
       </tr>

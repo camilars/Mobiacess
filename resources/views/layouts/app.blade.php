@@ -40,6 +40,11 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>

@@ -17,6 +17,11 @@ class LocalController extends Controller
         return view('local/index_local',compact('locals'));
     }
 
+    public function rotas()
+    {
+        return view('mapa');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

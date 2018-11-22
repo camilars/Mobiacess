@@ -29,3 +29,7 @@ Route::get('/accessibles/create', 'AccessibleController@create');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/mapa', 'HomeController@rotas')->name('mapa');
+
+Route::get('/mapa', 'LocalController@rotas');
