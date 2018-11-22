@@ -72,7 +72,7 @@ class LocalController extends Controller
         $local->foto=$name;
         $local->save();
         
-        return redirect('locals')->with('success', 'Cadastrado Local Com Sucesso');
+        return redirect('locals')->with('success', 'Local Cadastrado Com Sucesso');
     }
 
     /**
@@ -140,6 +140,6 @@ class LocalController extends Controller
     {
         $local = \App\Local::find($id);
         $local->delete();
-        return redirect('locals')->with('success','Local Deletado Com Sucesso');
+        return redirect('locals')->with('success','Local Excluido Com Sucesso');
     }
 }

@@ -57,10 +57,13 @@
             }
             .title {
                 font-size: 84px;
-                margin-left:360px;
+                margin-left:95%;
+                color:#F4F4F4; 
+                text-shadow: 2px 3px #000000;
             }
             .links > a {
-                color: #F7882F;
+                color:#F4F4F4;
+                text-shadow: 2px 2px #000000;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
