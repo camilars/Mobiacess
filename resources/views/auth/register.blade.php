@@ -18,6 +18,7 @@ function _cpf(cpf) {
         cpf == "99999999999")
         return false;
     add = 0;
+
     for (i = 0; i < 9; i++)
         add += parseInt(cpf.charAt(i)) * (10 - i);
     rev = 11 - (add % 11);
@@ -26,6 +27,7 @@ function _cpf(cpf) {
     if (rev != parseInt(cpf.charAt(9)))
         return false;
     add = 0;
+
     for (i = 0; i < 10; i++)
         add += parseInt(cpf.charAt(i)) * (11 - i);
     rev = 11 - (add % 11);
