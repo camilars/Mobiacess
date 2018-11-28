@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" content="width=device-width,initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Mapa</title>
 	<style>
@@ -34,11 +35,18 @@
 			}
 
 			var map=new google.maps.Map(document.getElementById('map'), options);
-		};
+			
+			var marker = new google.maps.Marker	({
+				position:{lat:-8.0586, lng:-34.9498},
+				map:map,
+				icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+			});
+
+		}
 
 	</script>
 	
-	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR5Op0VITqbeE5KBDuatLCXRgt2Vqk510&callback=initMap"></script>
+	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUMml4hTUsG8muGTaxiQyRCYAplooyEJw&callback=initMap"></script>
 
 
 </body>

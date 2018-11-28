@@ -8,7 +8,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Mobiacess</title>
+    <style>
+        
+        li:hover {
+    background-color:#F7882F;
 
+}
+    </style>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
