@@ -24,6 +24,8 @@ class CreateLocalsTable extends Migration
             $table->string('reference');
             $table->string('foto');
             $table->string('acessibilidade');
+            $table->string('latitude');
+            $table->string('longitude');
             $table->timestamps();
         });
     }

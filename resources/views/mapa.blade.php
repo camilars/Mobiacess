@@ -8,9 +8,9 @@
 	<title>Mapa</title>
 	<style>
 		#map{
-			height:500px;
-			width:50%;
-			margin-left:25%;
+			height:600px;
+			width:80%;
+			margin-left:10%;
 		}
 
 		h1{
@@ -23,7 +23,7 @@
 @section('content')
 <body>
 		
-	<h1>Mapa de igarassu</h1>	
+	<h1>Mapa de Igarassu</h1><br>	
 	
 	<div id="map"></div>
 	

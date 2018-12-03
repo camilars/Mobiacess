@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>eBusiness Bootstrap Template</title>
+  <title>Mobiacess</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -88,12 +88,6 @@
                       <li><a href="{{ route('login') }}">Entrar</a></li>
                       <li><a href="{{ route('register') }}">Cadastre-se</a></li>
                     </ul> 
-                  </li>
-                  <li>
-                    <a href="{{ route('login') }}">Entrar</a>
-                  </li>
-                  <li>
-                    <a href="{{ route('register') }}">Cadastrar-se </a>
                   </li>
             </ul>
           </div>

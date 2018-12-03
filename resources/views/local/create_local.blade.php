@@ -109,6 +109,23 @@ function mascara(id, mask){
 }
 </script>
 
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
   </head>
     <div class="container">
       <h2><center>Cadastro de Local</center></h2><br/>
@@ -176,6 +193,24 @@ function mascara(id, mask){
           </div>
         </div>
         
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+            <label for="Latitude">Latitude:</label>
+            <input type="text" class="form-control" name="latitude" id="lat">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+            <label for="Longitude">Longitude:</label>
+            <input type="text" class="form-control" name="longitude" id="lng"><br>
+            <button type="text" class="btn btn-info" style="margin-left:80px" onblur="getLocation(this.value);">Buscar Latitude e Longitude</button>
+          </div>
+        </div>
+        
+
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
