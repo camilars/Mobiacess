@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <link href="img/iconi.png" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -82,6 +82,9 @@
                   <li>
                     <a class="page-scroll" href="#contact">Contatos</a>
                   </li>
+                  <li>
+                    <a class="page-scroll" href="#about">Sobre</a>
+                  </li>
 
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Acessar<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -108,7 +111,7 @@
     <div id="ensign-nivoslider" class="slides">
       <img src="img/slider/cadeirantess.jpg" alt="" title="#slider-direction-1" />
       <img src="img/slider/cadeirante2.jpg" alt="" title="#slider-direction-2" />
-      <img src="img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
+      <img src="img/slider/prefeitura.jpg" alt="" title="#slider-direction-3" />
     </div>
 
     <!-- direction 1 -->
@@ -119,7 +122,7 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">Mobiacess</h2>
+                <h2 class="title1">Seja Benvindo ao Mobiacess</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -148,7 +151,7 @@
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes,mostrando no mapa as melhores rotas e seus tipos de acessibilidade</h1>
+                <h1 class="title2">Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes, mostrando no mapa os pontos e seus tipos de acessibilidade</h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
@@ -169,7 +172,6 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">Informações do Mobiacess</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -205,7 +207,7 @@
         <div class="well-left">
           <div class="single-well">
             <a href="#">
-              <img src="img/about/1.jpg" alt="">
+              <img src="img/about/cadeirantess.jpg" alt="">
             </a>
           </div>
         </div>
@@ -215,26 +217,26 @@
         <div class="well-middle">
           <div class="single-well">
             <a href="#">
-              <h4 class="sec-head">project Maintenance</h4>
+              <h4 class="sec-head">Nosso Projeto</h4>
             </a>
             <p>
-              Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+              Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes, mostrando no mapa os pontos e seus tipos de acessibilidade.
             </p>
             <ul>
               <li>
-                <i class="fa fa-check"></i> Interior design Package
+                <i class="fa fa-check"></i> Cadastro de Usuário
               </li>
               <li>
-                <i class="fa fa-check"></i> Building House
+                <i class="fa fa-check"></i> Cadastro de Local
               </li>
               <li>
-                <i class="fa fa-check"></i> Reparing of Residentail Roof
+                <i class="fa fa-check"></i> Mapa
               </li>
               <li>
-                <i class="fa fa-check"></i> Renovaion of Commercial Office
+                <i class="fa fa-check"></i> Marcação de Pontos 
               </li>
               <li>
-                <i class="fa fa-check"></i> Make Quality Products
+                <i class="fa fa-check"></i> Locais Acessíveis ou Não
               </li>
             </ul>
           </div>
@@ -272,11 +274,6 @@
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
                       <i class="fa fa-instagram"></i>
                     </a>
                   </li>
@@ -305,11 +302,6 @@
                   </li>
                   <li>
                     <a href="#">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
                       <i class="fa fa-instagram"></i>
                     </a>
                   </li>
@@ -317,7 +309,7 @@
               </div>
             </div>
             <div class="team-content text-center">
-              <h4>Camilla</h4>
+              <h4>Camila</h4>
               <p>Desenvolvedor Web</p>
             </div>
           </div>
@@ -334,11 +326,6 @@
                   <li>
                     <a href="#">
                       <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter"></i>
                     </a>
                   </li>
                   <li>
@@ -387,24 +374,21 @@
               <li>
                 <a href="#" data-filter=".design">Design</a>
               </li>
-              <li>
-                <a href="#" data-filter=".photo">Photoshop</a>
-              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="awesome-project-content">
         <!-- single-awesome-project start -->
-        <div class="col-md-4 col-sm-4 col-xs-12 design development">
+        <div class="col-md-4 col-sm-4 col-xs-12 design">
           <div class="single-awesome-project">
             <div class="awesome-img">
               <a href="#"><img src="img/portfolio/1.jpg" alt="" /></a>
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/1.jpg">
-                    <h4>Business City</h4>
-                    <span>Web Development</span>
+                    <h4>Otímo Designer</h4>
+                    <span>Desenvolvimento Web</span>
                   </a>
                 </div>
               </div>
@@ -413,15 +397,15 @@
         </div>
         <!-- single-awesome-project end -->
         <!-- single-awesome-project start -->
-        <div class="col-md-4 col-sm-4 col-xs-12 photo">
+        <div class="col-md-4 col-sm-4 col-xs-12 photo development">
           <div class="single-awesome-project">
             <div class="awesome-img">
               <a href="#"><img src="img/portfolio/2.jpg" alt="" /></a>
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/2.jpg">
-                    <h4>Blue Sea</h4>
-                    <span>Photosho</span>
+                    <h4>Site Funcional</h4>
+                    <span>Desenvolvimento Web</span>
                   </a>
                 </div>
               </div>
@@ -430,15 +414,15 @@
         </div>
         <!-- single-awesome-project end -->
         <!-- single-awesome-project start -->
-        <div class="col-md-4 col-sm-4 col-xs-12 design">
+        <div class="col-md-4 col-sm-4 col-xs-12 development">
           <div class="single-awesome-project">
             <div class="awesome-img">
               <a href="#"><img src="img/portfolio/3.jpg" alt="" /></a>
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/3.jpg">
-                    <h4>Beautiful Nature</h4>
-                    <span>Web Design</span>
+                    <h4>Protótipo para o Cliente</h4>
+                    <span>Desenvolvimento Web</span>
                   </a>
                 </div>
               </div>
@@ -454,42 +438,8 @@
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/4.jpg">
-                    <h4>Creative Team</h4>
-                    <span>Web design</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- single-awesome-project end -->
-        <!-- single-awesome-project start -->
-        <div class="col-md-4 col-sm-4 col-xs-12 development">
-          <div class="single-awesome-project">
-            <div class="awesome-img">
-              <a href="#"><img src="img/portfolio/5.jpg" alt="" /></a>
-              <div class="add-actions text-center text-center">
-                <div class="project-dec">
-                  <a class="venobox" data-gall="myGallery" href="img/portfolio/5.jpg">
-                    <h4>Beautiful Flower</h4>
-                    <span>Web Development</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- single-awesome-project end -->
-        <!-- single-awesome-project start -->
-        <div class="col-md-4 col-sm-4 col-xs-12 design photo">
-          <div class="single-awesome-project">
-            <div class="awesome-img">
-              <a href="#"><img src="img/portfolio/6.jpg" alt="" /></a>
-              <div class="add-actions text-center">
-                <div class="project-dec">
-                  <a class="venobox" data-gall="myGallery" href="img/portfolio/6.jpg">
-                    <h4>Night Hill</h4>
-                    <span>Photoshop</span>
+                    <h4>Time Creativo</h4>
+                    <span>Desenvolvimento Web</span>
                   </a>
                 </div>
               </div>
@@ -509,7 +459,6 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
         <div class="suscribe-text text-center">
           <h3>benvindo a nosso site Mobiacess</h3>
-          <a class="sus-btn" href="#">Get A quate</a>
         </div>
       </div>
     </div>
@@ -535,7 +484,6 @@
             <div class="single-icon">
               <i class="fa fa-mobile"></i>
               <p>
-                Telefone:(81)3548-1322<br>
                 <span>Segunda-Sexta(9:00-17:00)</span>
               </p>
             </div>
@@ -547,13 +495,13 @@
             <div class="single-icon">
               <i class="fa fa-envelope-o"></i>
               <p>
-                Email: leonardo@gmail.com<br>
+                Email: leonardo.alves779@gmail.com<br>
               </p>
                <p>
-                Email: tuanno@gmail.com<br>
+                Email: tuannodanyllo26@gmail.com<br>
               </p>
                <p>
-                Email: camila@gmail.com<br>
+                Email: camila.rs122@gmail.com<br>
               </p>
             </div>
           </div>
@@ -571,47 +519,6 @@
           </div>
         </div>
       </div>
-      <div class="row">
-
-        <!-- Start Google Map -->
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <!-- Start Map -->
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-          <!-- End Map -->
-        </div>
-        <!-- End Google Map -->
-
-        <!-- Start  contact -->
-        <div class="col-md-6 col-sm-6 col-xs-12">
-          <div class="form contact-form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Objetivo" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesagem"></textarea>
-                <div class="validation"></div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
-            </form>
-          </div>
-        </div>
-        <!-- End Left contact -->
-      </div>
-    </div>
-  </div>
-</div>
 <!-- End Contact Area -->
 
 <!-- Start Footer bottom Area -->
@@ -626,20 +533,17 @@
                 <h2><span>M</span>obiacess</h2>
               </div>
 
-              <p>Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes,mostrando no mapa as melhores rotas e seus tipos de acessibilidade.</p>
+              <p>Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes,mostrando no mapa as melhores pontos e seus tipos de acessibilidade.</p>
               <div class="footer-icons">
                 <ul>
                   <li>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
                     <a href="#"><i class="fa fa-google"></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
                   </li>
                 </ul>
               </div>
@@ -651,12 +555,8 @@
           <div class="footer-content">
             <div class="footer-head">
               <h4>Informação</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
               <div class="footer-contacts">
-                <p><span>Tel:</span> +123 456 789</p>
-                <p><span>Email:</span>mobiacess@gmail.com</p>
+                <p><span>Email:</span>mobiacess2018@gmail.com</p>
                 <p><span>Horas de Trabalho:</span>09:00-17:00</p>
               </div>
             </div>
@@ -672,8 +572,6 @@
                 <a href="#"><img src="img/portfolio/2.jpg" alt=""></a>
                 <a href="#"><img src="img/portfolio/3.jpg" alt=""></a>
                 <a href="#"><img src="img/portfolio/4.jpg" alt=""></a>
-                <a href="#"><img src="img/portfolio/5.jpg" alt=""></a>
-                <a href="#"><img src="img/portfolio/6.jpg" alt=""></a>
               </div>
             </div>
           </div>
@@ -681,28 +579,6 @@
       </div>
     </div>
   </div>
-  <div class="footer-area-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="copyright text-center">
-            <p>
-              &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
-            </p>
-          </div>
-          <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

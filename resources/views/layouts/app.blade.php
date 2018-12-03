@@ -9,11 +9,12 @@
 
     <title>Mobiacess</title>
     <style>
-        
-        li:hover {
-    background-color:#F7882F;
 
-}
+        li:hover {
+            background-color:#F7882F;        
+
+        }
+
     </style>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,8 +28,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background: rgba(0, 0, 0, 0) none repeat scroll 0 0;">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Mobiacess
                 </a>
