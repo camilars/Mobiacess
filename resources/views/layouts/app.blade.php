@@ -2,18 +2,49 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+     <!-- Favicons -->
+  <link href="img/iconi.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+ 
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive Stylesheet File -->
+  <link href="css/responsive.css" rel="stylesheet">
+
     <title>Mobiacess</title>
     <style>
 
-        li:hover {
-            background-color:#F7882F;        
+     span {
+      color: #3ec1d5;
 
-        }
+  }
+
+  h1 {
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1;
+      font-family: 'Raleway', sans-serif;
+
+  }
+
+  a:hover {
+      color: #3EC1D5;
+      text-decoration: none;
+
+  }
 
     </style>
     <!-- Scripts -->
@@ -28,11 +59,17 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background: rgba(0, 0, 0, 0) none repeat scroll 0 0;">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 0px;
+  text-transform: capitalize;
+  letter-spacing: 1px;">
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Mobiacess
+                    <h1><span>M</span>obiacess</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,10 +86,7 @@
                         <!-- Authentication Links -->
                         @guest
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
-                            </li>
-
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>

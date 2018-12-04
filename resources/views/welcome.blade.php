@@ -74,16 +74,19 @@
                 <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                   <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                      <a class="page-scroll" href="#team">Equipe</a>
+                      <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
                     </li>
                     <li>
-                     <a class="page-scroll" href="#portfolio">Portfolio</a>
+                     <a class="page-scroll" href="#team">Equipe</a>
                    </li>
-                  <li>
-                    <a class="page-scroll" href="#contact">Contatos</a>
+                    <li>
+                     <a class="page-scroll" href="#team">Equipe</a>
+                   </li>
+                   <li>        
+                    <a class="page-scroll" href="#portfolio">Portfolio</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#about">Sobre</a>
+                    <a class="page-scroll" href="#contact">Contatos</a>
                   </li>
 
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Acessar<span class="caret"></span></a>
