@@ -109,25 +109,7 @@ function mascara(id, mask){
 }
 </script>
 
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-
-  </head>
-    <div class="container">
+    <div class="container"><br><br><br>
       <h2><center>Cadastro de Local</center></h2><br/>
       <form method="post" action="{{url('locals')}}" enctype="multipart/form-data">
         @csrf
@@ -193,20 +175,29 @@ function showPosition(position) {
           </div>
         </div>
         
-        <div class="row">
+        <!-- <form id="demo">
+          <input type="text" name="latitude" id="latitude">
+          <input type="text" name="longitude" id="longitude">
+        </form>
+
+        <button onclick="getLocation()"></button> -->
+
+
+
+        <div class="row" id="demo">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="Latitude">Latitude:</label>
-            <input type="text" class="form-control" name="latitude" id="lat">
+            <input type="text" class="form-control" name="latitude" id="latitude">
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="demo">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="Longitude">Longitude:</label>
-            <input type="text" class="form-control" name="longitude" id="lng"><br>
-            <button type="text" class="btn btn-info" style="margin-left:80px" onblur="getLocation(this.value);">Buscar Latitude e Longitude</button>
+            <input type="text" class="form-control" name="longitude" id="longitude"><br>
+            <a class="btn btn-info" style="margin-left:80px" onclick="getLocation()" id="demo">Buscar Latitude e Longitude</a>
           </div>
         </div>
         
@@ -247,5 +238,46 @@ function showPosition(position) {
           </div>
         </div>
       </form>
-    </div>
+    </div>   
+    <script>
+// var x = document.getElementById("demo");
+// var a = document.getElementById("latitude");
+// var b = document.getElementById("longitude");
+
+// function getLocation() {
+//   console.log(navigator.geolocation.getCurrentPosition(showPosition));
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else { 
+//         x.innerHTML = "O navegador não suporta a localização.";
+//     }
+// }
+
+// function showPosition(position) {
+//   console.log('hell');
+//     a.value = position.coords.latitude; 
+//     b.value = position.coords.longitude;
+// }
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    // x.innerHTML = position.coords.latitude;
+    // a.innerHTML = "Latitude: "+position.coords.latitude; 
+    // b.innerHTML = "Longitude: "+position.coords.longitude;
+    var a = document.getElementById("latitude");
+    var b = document.getElementById("longitude");
+
+    a.value = position.coords.latitude; 
+    b.value= position.coords.longitude;
+}
+</script>
+
 @endsection

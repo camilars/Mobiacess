@@ -55,6 +55,9 @@ class LocalController extends Controller
         $local->city=$request->get('city');
         $local->state=$request->get('state');
         $local->cep=$request->get('cep');
+
+        $local->latitude=$request->get('latitude');
+        $local->longitude=$request->get('longitude');
         if (!empty($request->get('rampa'))) {
             $acessibilidade .= $request->get('rampa') . ",";
         }
@@ -73,6 +76,7 @@ class LocalController extends Controller
         $local->save();
         
         return redirect('locals')->with('success', 'Local Cadastrado Com Sucesso');
+
     }
 
     /**

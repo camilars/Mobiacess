@@ -42,9 +42,25 @@
 
   a:hover {
       color: #3EC1D5;
-      text-decoration: none;
-
+      text-decoration:none; 
   }
+
+  a{
+
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  ul{
+
+    margin-left: 30%;
+    text-decoration: none;
+  }
+
+
+
+
 
     </style>
     <!-- Scripts -->
@@ -59,16 +75,16 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 0);
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 1);
   color: #fff;
   font-size: 15px;
   font-weight: 500;
-  padding: 4px 0px;
+  padding: 12px 0px;
   text-transform: capitalize;
   letter-spacing: 1px;">
             <div class="container">
 
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand page-scroll sticky-logo" href="{{ url('/') }}">
                     <h1><span>M</span>obiacess</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -82,20 +98,21 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                    <ul class="nav navbar-nav navbar-right" >
                         <!-- Authentication Links -->
                         @guest
-
+                      
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                                <a class="page-scroll" style="text-decoration: none;" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="page-scroll" style="text-decoration: none;" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
+                                    <a class="page-scroll" style="text-decoration: none;" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                                 @endif
                             </li>
                         @else

@@ -77,7 +77,7 @@
                       <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
                     </li>
                     <li>
-                     <a class="page-scroll" href="#team">Equipe</a>
+                     <a class="page-scroll" href="#about">Sobre</a>
                    </li>
                     <li>
                      <a class="page-scroll" href="#team">Equipe</a>
