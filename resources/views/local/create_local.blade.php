@@ -276,7 +276,7 @@ function showPosition(position) {
     var b = document.getElementById("longitude");
 
     a.value = position.coords.latitude; 
-    b.value= position.coords.longitude;
+    b.value = position.coords.longitude;
 }
 </script>
 

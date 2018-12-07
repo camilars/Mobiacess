@@ -5,11 +5,11 @@
 <!DOCTYPE html>
 <html>
 
- <head>
+<head>
     <meta charset="utf-8">
     <title>Editar local</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-<!-- <!------ Include the above in your HEAD tag ---------->
+    <!-- <!------ Include the above in your HEAD tag ---------->
 <!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
@@ -51,7 +51,51 @@
     </div>
 </body> -->
 
-<div class="container">
+<div id="formWrapper">
+
+    <div id="form">
+        <div class="logo">
+            <h1 class="text-center head">Entrar</h1>
+        </div>
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <div class="form-item">
+                
+                <input type="email" name="email" placeholder="Email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+                @if ($errors->has('email'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+                @endif
+            </div>
+
+            <div class="form-item">
+                <input type="password" name="password" placeholder="Senha" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                @if ($errors->has('password'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+                @endif
+                  
+            </div>
+
+            <div class="form-item">
+                <a class="pull-left" href="{{ route('password.request') }}">
+                    {{ __('Esqueceu sua senha?') }}
+                </a>
+                <input type="submit" class="login pull-right" value="Entrar">
+
+                <div class="clear-fix"></div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+
+<!-- <div class="container"><br><br><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -117,5 +161,5 @@
             </div>
         </div>
     </div>
-</div> 
+</div>  -->
 @endsection

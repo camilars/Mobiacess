@@ -2,29 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-     <!-- Favicons -->
-  <link href="img/iconi.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
- 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive Stylesheet File -->
-  <link href="css/responsive.css" rel="stylesheet">
-
     <title>Mobiacess</title>
     <style>
+        
+    li:hover {
+        background: none;
+        color: #fff;;
 
-     span {
+    }
+
+    span {
       color: #3ec1d5;
 
   }
@@ -57,11 +49,6 @@
     margin-left: 30%;
     text-decoration: none;
   }
-
-
-
-
-
     </style>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -72,18 +59,26 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+  <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+  <!-- Responsive Stylesheet File -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 1);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 12px 0px;
-  text-transform: capitalize;
-  letter-spacing: 1px;">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style='position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.40);
+  padding:-6%; 
+  z-index: 129;'>
             <div class="container">
-
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ url('/') }}">
                     <h1><span>M</span>obiacess</h1>
                 </a>
@@ -98,21 +93,23 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                    <ul class="nav navbar-nav navbar-right" >
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                      
-                            
+
                             <li class="nav-item">
-                                <a class="page-scroll" style="text-decoration: none;" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                                <a class="nav-link" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">
-                                <a class="page-scroll" style="text-decoration: none;" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="page-scroll" style="text-decoration: none;" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                                 @endif
                             </li>
                         @else

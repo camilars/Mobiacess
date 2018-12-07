@@ -21,9 +21,9 @@
 @extends('layouts.app')
 
 @section('content')
-<body>
+<body><br><br><br>
 		
-	<h1>Mapa de Igarassu</h1><br>	
+	<h1>Mapa de Igarassu</h1>
 	
 	<div id="map"></div>
 	
@@ -47,7 +47,7 @@
 	</script>
 	
 	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUMml4hTUsG8muGTaxiQyRCYAplooyEJw&callback=initMap"></script>
-
+<!-- how to make a marker in google maps with ajax in laravel -->
 
 </body>
 @endsection
