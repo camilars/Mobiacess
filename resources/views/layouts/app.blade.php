@@ -42,6 +42,7 @@
     transition: all 0.3s ease 0s;
     text-decoration: none;
     background-color: transparent;
+
   }
 
   ul{
@@ -49,6 +50,8 @@
     margin-left: 30%;
     text-decoration: none;
   }
+
+
     </style>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -58,26 +61,27 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-  <!-- <link href="css/style.css" rel="stylesheet"> -->
+  <link href="/css/style.css" rel="stylesheet">
 
   <!-- Responsive Stylesheet File -->
-  <link href="css/responsive.css" rel="stylesheet">
+  <link href="/css/responsive.css" rel="stylesheet">
+
+  <!-- Nivo Slider Theme -->
+  <link href="/css/nivo-slider-theme.css" rel="stylesheet">
 
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style='position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background: rgba(0, 0, 0, 0.40);
-  padding:-6%; 
-  z-index: 129;'>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 1);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 0px;
+  text-transform: capitalize;
+  letter-spacing: 1px;">
             <div class="container">
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ url('/') }}">
                     <h1><span>M</span>obiacess</h1>
@@ -86,9 +90,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="nav navbar-nav navbar-right">
 
                     </ul>
 
@@ -97,24 +101,24 @@
                         <!-- Authentication Links -->
                         @guest
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                            <li class="nav-item" >
+                                <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                                <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
+                                    <a class="page-scroll" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                                 @endif
                             </li>
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

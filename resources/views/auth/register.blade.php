@@ -112,10 +112,14 @@ function validarCPF(el){
 
 <div class="container"><br><br><br>
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Cadastrar') }}</div>
+        <div id="formWrapper">
+            <div id="form">
+        <div class="logo">
+            <h2 class="text-center head">Cadastrar</h2>
+        </div>
 
+        <div class="col-md-8">
+            <div class="card" id="card-register">
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -204,6 +208,8 @@ function validarCPF(el){
                 </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 </div>
 @endsection

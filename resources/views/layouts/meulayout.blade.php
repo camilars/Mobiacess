@@ -2,29 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-     <!-- Favicons -->
-  <link href="img/iconi.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
- 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive Stylesheet File -->
-  <link href="css/responsive.css" rel="stylesheet">
-
     <title>Mobiacess</title>
     <style>
+        
+    li:hover {
+        background: none;
+        color: #fff;;
 
-     span {
+    }
+
+    span {
       color: #3ec1d5;
 
   }
@@ -50,6 +42,7 @@
     transition: all 0.3s ease 0s;
     text-decoration: none;
     background-color: transparent;
+
   }
 
   ul{
@@ -57,9 +50,6 @@
     margin-left: 30%;
     text-decoration: none;
   }
-
-
-
 
 
     </style>
@@ -72,18 +62,27 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive Stylesheet File -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Nivo Slider Theme -->
+  <link href="css/nivo-slider-theme.css" rel="stylesheet">
+
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 1);
-  color: #fff;
+        <nav class="navbar navbar-expand-lg navbar-light navbar-laravel" style="background-color: rgba(0, 0, 0, 1);
   font-size: 15px;
   font-weight: 500;
   padding: 12px 0px;
   text-transform: capitalize;
   letter-spacing: 1px;">
             <div class="container">
-
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ url('/') }}">
                     <h1><span>M</span>obiacess</h1>
                 </a>
@@ -91,33 +90,35 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="nav navbar-nav navbar-right">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                    <ul class="nav navbar-nav navbar-right" >
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                      
-                            
+
+                            <li class="nav-item" >
+                                <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                            </li>
+
                             <li class="nav-item">
-                                <a class="page-scroll" style="text-decoration: none;" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                                <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">
-                                <a class="page-scroll" style="text-decoration: none;" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                                <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="page-scroll" style="text-decoration: none;" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
+                                    <a class="page-scroll" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                                 @endif
                             </li>
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

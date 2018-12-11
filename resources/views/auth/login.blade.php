@@ -1,22 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Editar local</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <!-- <!------ Include the above in your HEAD tag ---------->
-<!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!-- - Include the above in your HEAD tag -------- -->  
-<style>
-</style>
-</head>
 
 <!-- <body>
 
@@ -50,50 +31,95 @@
         </div>
     </div>
 </body> -->
+@extends('layouts.app')
 
-<div id="formWrapper">
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div id="formWrapper">
+            <div id="form">
 
-    <div id="form">
-        <div class="logo">
-            <h1 class="text-center head">Entrar</h1>
-        </div>
+                <div class="logo">
+                    <h2 class="text-center head">Entrar</h2>
+                </div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <div class="form-item">
-                
-                <input type="email" name="email" placeholder="Email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                <div class="col-md-12">
+                    <div class="card" id="card-login">
+                        <div class="card-body">
 
-                @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="form-group row">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
+                                    <div class="col-md-8">                
+                                        <input type="email" name="email" placeholder="Email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                        @if ($errors->has('email'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
+                                    <div class="col-md-8">                
+                                        <input type="password" name="password" placeholder="Senha" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                        @if ($errors->has('password'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6">  
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                            <label class="form-check-label" for="remember">
+                                                {{ __('Relembrar-me') }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">  
+                                        <div class="form-check">
+                                            <a class="pull-left" href="{{ route('password.request') }}">
+                                                {{ __('Esqueceu sua senha?') }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group row">
+                                    <div class="col-md-8">                
+                                        <input type="submit" class="login pull-right" value="Entrar">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-item">
-                <input type="password" name="password" placeholder="Senha" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-                  
-            </div>
-
-            <div class="form-item">
-                <a class="pull-left" href="{{ route('password.request') }}">
-                    {{ __('Esqueceu sua senha?') }}
-                </a>
-                <input type="submit" class="login pull-right" value="Entrar">
-
-                <div class="clear-fix"></div>
-            </div>
-        </form>
         </div>
     </div>
+</div>
 
+@endsection
+
+<!--  <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Relembrar-me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div> -->
 
 <!-- <div class="container"><br><br><br>
     <div class="row justify-content-center">
@@ -162,4 +188,4 @@
         </div>
     </div>
 </div>  -->
-@endsection
+
