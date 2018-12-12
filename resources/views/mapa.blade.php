@@ -1,10 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" content="width=device-width,initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Mapa</title>
-</head> -->
+
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<style>
 		#map{
@@ -34,13 +28,15 @@
 			}
 
 			var map=new google.maps.Map(document.getElementById('map'), options);
-			
-			var marker = new google.maps.Marker	({
-				position:{lat:-8.0586, lng:-34.9498},
+			 <?php foreach ($locals as $local): ?>
+				
+			new google.maps.Marker	({
+				position: { lat: {{$local->latitude}}, lng:{{$local->longitude}} },
 				map:map,
 				icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
 			});
 
+			<?php endforeach ?> 
 		}
 
 	</script>
@@ -52,4 +48,4 @@
 
 
 @endsection
-</html>
+

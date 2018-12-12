@@ -128,7 +128,7 @@ function validarCPF(el){
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus >
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder ="Nome" required autofocus >
 
                                 @if ($errors->has('nome'))
                                     <span class="invalid-feedback" role="alert">
@@ -142,7 +142,7 @@ function validarCPF(el){
                             <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('Cpf') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
+                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder ="Cpf" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
 
                                 @if ($errors->has('cpf'))
                                     <span class="invalid-feedback" role="alert">
@@ -156,7 +156,7 @@ function validarCPF(el){
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required 
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder ="E-mail" required 
                                 autofocus onblur="validacaoEmail(f1.email)">
 
                                 @if ($errors->has('e-mail'))
@@ -171,7 +171,7 @@ function validarCPF(el){
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder ="Senha" required>
 
                                 @if ($errors->has('senha'))
                                     <span class="invalid-feedback" role="alert">
@@ -185,23 +185,23 @@ function validarCPF(el){
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmação senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" placeholder ="Confirmação de Senha" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
                             
                         
 
-                        <div class="form-group row mb-0" style="margin-left: 80px;">
+                        <div class="form-group row mb-0" style="margin-left: -3%;">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" style="border-radius:10%; " class="btn btn-primary">
                                     {{ __('Cadastrar') }}
                                 </button>
                             </div>
                         </div>
     
-                        <div class="form-group row mb-0" id="cancelar" style="margin-left: 250px; margin-top:-37px; ">
+                        <div class="form-group row mb-0" id="cancelar" style="margin-right:-80%; margin-top:-37px;  ">
                             <div class="col-md-6 offset-md-4">
-                                <a href="{{action('HomeController@index')}}" class="btn btn-danger">Cancelar</a>
+                                <a href="{{action('HomeController@index')}}" style="border-radius:10%; " class="btn btn-danger">Cancelar</a>
                             </div>    
                         </div>
                     </form>

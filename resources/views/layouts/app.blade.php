@@ -104,10 +104,6 @@
                             <li class="nav-item" >
                                 <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
                             </li>
-
-                            <li class="nav-item">
-                                <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
@@ -117,6 +113,13 @@
                                 @endif
                             </li>
                         @else
+                            <li class="nav-item" >
+                                <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

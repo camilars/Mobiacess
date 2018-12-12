@@ -17,10 +17,7 @@ class LocalController extends Controller
         return view('local/index_local',compact('locals'));
     }
 
-    public function rotas()
-    {
-        return view('mapa');
-    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -146,4 +143,14 @@ class LocalController extends Controller
         $local->delete();
         return redirect('locals')->with('success','Local Excluido Com Sucesso');
     }
+
+
+    public function loadmap()
+    {
+
+        $locals=\App\Local::all();
+        return view('mapa',compact('locals'));
+    }
+
+
 }

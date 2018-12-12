@@ -30,8 +30,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/mapa', 'HomeController@rotas')->name('mapa');
-
-Route::get('/mapa', 'LocalController@rotas');
+Route::get('/mapa', 'LocalController@loadmap')->name('mapa');
 
 // Route::get('/images/')->('foto');

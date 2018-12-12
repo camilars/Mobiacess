@@ -2,6 +2,14 @@
 
 @section('content')
 
+<style>
+  
+  bory{
+
+    background-color:grey; 
+  }
+</style>
+
 <!-- Script do cep -->
 
  <script type="text/javascript" >
@@ -197,7 +205,7 @@ function mascara(id, mask){
           <div class="form-group col-md-4">
             <label for="Longitude">Longitude:</label>
             <input type="text" class="form-control" name="longitude" id="longitude"><br>
-            <a class="btn btn-info" style="margin-left:80px" onclick="getLocation()" id="demo">Buscar Latitude e Longitude</a>
+            <a class="btn btn-info" style="margin-left:40px" onclick="getLocation()" id="demo">Buscar Latitude e Longitude</a>
           </div>
         </div>
         
