@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -74,7 +74,7 @@
                 <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                   <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                      <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                      <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
                     </li>
                     <li>
                      <a class="page-scroll" href="#about">Sobre</a>
@@ -125,11 +125,11 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                <h2 class="title1">Seja Benvindo ao Mobiacess</h2>
+                <h2 class="title1">Seja Bem-vindo ao Mobiacess</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                <h1 class="title2">Pegue o melhor caminho todos os dias, Facilite sua locomoção</h1>
+                <h1 class="title2">Pegue o melhor caminho todos os dias e facilite sua locomoção</h1>
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
@@ -390,7 +390,7 @@
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/1.jpg">
-                    <h4>Otímo Designer</h4>
+                    <h4>Ótimo Designer</h4>
                     <span>Desenvolvimento Web</span>
                   </a>
                 </div>
@@ -441,7 +441,7 @@
               <div class="add-actions text-center">
                 <div class="project-dec">
                   <a class="venobox" data-gall="myGallery" href="img/portfolio/4.jpg">
-                    <h4>Time Creativo</h4>
+                    <h4>Time Criativo</h4>
                     <span>Desenvolvimento Web</span>
                   </a>
                 </div>
@@ -461,7 +461,7 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
         <div class="suscribe-text text-center">
-          <h3>benvindo a nosso site Mobiacess</h3>
+          <h3>bem-vindo a nosso site Mobiacess</h3>
         </div>
       </div>
     </div>

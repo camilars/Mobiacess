@@ -102,7 +102,7 @@
                         @guest
 
                             <li class="nav-item" >
-                                <a class="page-scroll" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                                <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
                             </li>
                             <li class="nav-item">
                                 <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>

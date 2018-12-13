@@ -12,7 +12,7 @@
 <!--                 <a class="btn btn-primary" href="{{action('AccessibleController@create')}}">Cadastro da Acessibilidade</a>
  -->                
                     <a class="btn btn-primary" href="{{action('LocalController@create')}}">Cadastrar Local</a>
-                    <a class="btn btn-primary" href="{{action('LocalController@rotas')}}">Acessar Mapa</a>
+                    <a class="btn btn-primary" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
 
                 <div class="card-body">
                     @if (session('status'))

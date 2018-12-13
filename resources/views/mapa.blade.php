@@ -1,6 +1,5 @@
-
-	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<style>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<style>
 		#map{
 			height:600px;
 			width:80%;
@@ -10,7 +9,7 @@
 		h1{
 			text-align: center;
 		}
-	</style>
+</style>
 @extends('layouts.app')
 
 @section('content')

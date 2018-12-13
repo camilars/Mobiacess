@@ -115,7 +115,7 @@ function validarCPF(el){
         <div id="formWrapper">
             <div id="form">
         <div class="logo">
-            <h2 class="text-center head">Cadastrar</h2>
+            <h3 class="text-center head">Cadastrar</h3>
         </div>
 
         <div class="col-md-8">
@@ -139,7 +139,7 @@ function validarCPF(el){
                         </div>
 
                          <div class="form-group row">
-                            <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('Cpf') }}</label>
+                            <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder ="Cpf" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
@@ -182,26 +182,26 @@ function validarCPF(el){
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmação senha') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar a Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" placeholder ="Confirmação de Senha" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" placeholder ="Confirmação de Senha" class="form-control" name="password_confirmation"required>
                             </div>
-                        </div>
+                        </div><br>  
                             
                         
 
-                        <div class="form-group row mb-0" style="margin-left: -3%;">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" style="border-radius:10%; " class="btn btn-primary">
+                        <div class="form-group row mb-0" style="margin-left:3%;">
+                            <div class="col-md-2 offset-md-4">
+                                <button type="submit" style="border-radius:22px;" class="btn btn-primary" id="butcad">
                                     {{ __('Cadastrar') }}
                                 </button>
                             </div>
-                        </div>
+                        <!-- </div> -->
     
-                        <div class="form-group row mb-0" id="cancelar" style="margin-right:-80%; margin-top:-37px;  ">
-                            <div class="col-md-6 offset-md-4">
-                                <a href="{{action('HomeController@index')}}" style="border-radius:10%; " class="btn btn-danger">Cancelar</a>
+                        <!-- <div class="form-group row mb-0" id="cancelar" style="margin-right:-60%; margin-top:-37px;  "> -->
+                            <div class="col-md-4 offset-md-4">
+                                <a href="{{action('HomeController@index')}}" style="border-radius:22px; margin-left:100%; margin-top:-41%;" class="btn btn-danger">Cancelar</a>
                             </div>    
                         </div>
                     </form>

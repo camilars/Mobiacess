@@ -19,6 +19,63 @@ body {
   margin-top: -85px;
 }
 
+/*Formulário de Login*/
+
+div.card-body{
+  text-align: center; 
+}
+
+div#card-login.card{
+  padding-left:-10%; 
+}
+
+label#email{
+  margin-left:-10%;
+}
+
+label#senha{
+  margin-left: -10%;
+}
+
+#formulario{
+  margin-top:4%;
+  margin-left:; 
+}
+
+#emailin{
+  width:110%;
+}
+
+#password{
+  width: 110%;  
+}
+
+#esquecer{
+  margin-left:-7%;   
+}
+
+/*Formulário de cadastro do usuário*/
+
+#password-confirm{
+  width: 110%;
+}
+
+#email{
+  width: 110%;
+}
+
+#cpf{
+  width: 110%;
+}
+
+#name{
+  width: 110%;
+}
+
+#butcad{
+  
+}
+
 
 body{
    background-color:#fff; 
