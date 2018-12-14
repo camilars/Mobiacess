@@ -101,9 +101,9 @@
                         <!-- Authentication Links -->
                         @guest
 
-                            <li class="nav-item" >
+                            <!-- <li class="nav-item" >
                                 <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>
@@ -122,16 +122,15 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    <i class="fa fa-street-view" style="font-size:20;"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" style="background-color:#000000;" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Sair') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

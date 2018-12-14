@@ -16,6 +16,8 @@ Route::resource('accessibles','AccessibleController');
 
 Route::resource('locals','LocalController');
 
+Route::resource('loadmap','LocalController');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -28,7 +30,7 @@ Route::get('/accessibles/create', 'AccessibleController@create');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'LocalController@loadmap')->name('home');
 
 Route::get('/mapa', 'LocalController@loadmap')->name('mapa');
 

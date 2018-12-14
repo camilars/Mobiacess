@@ -2,14 +2,6 @@
 
 @section('content')
 
-<!-- <style>
-  
-  body{
-
-    background-color:grey; 
-  }
-</style> -->
-
 <!-- Script do cep -->
 
  <script type="text/javascript" >
@@ -122,34 +114,32 @@ function mascara(id, mask){
       <h2><center>Cadastro de Local</center></h2><br/>
       <form method="post" action="{{url('locals')}}" enctype="multipart/form-data">
         @csrf
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+        <div class="row justify-content-md-center">
+          <div class="form-group col-md-10">
             <label for="NameOfLocal">Nome do Local:</label>
             <input type="text" class="form-control" name="NameOfLocal">
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+        <div class="row justify-content-md-center">
+          <div class="form-group col-md-3">
             <label for="Cep">Cep:</label>
             <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9" onkeypress="return mask(event, this, '#####-###')">
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
+          <div class="form-group col-md-7">
               <label for="Street">Rua:</label>
               <input type="text" class="form-control" name="street" id="rua">
             </div>
-          </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
+        </div>
+        
+        <div class="row justify-content-md-center">
+            <div class="form-group col-md-3">
               <label for="Burgh">Bairro:</label>
               <input type="text" class="form-control" name="burgh" id="bairro">
+            </div>
+            <div class="form-group col-md-7">
+             <label for="City">Cidade:</label>
+              <input type="text" class="form-control" name="city" id="cidade">
             </div>
           </div>
         <!-- <div class="row">
@@ -159,31 +149,16 @@ function mascara(id, mask){
             <input class="date form-control"  type="text" id="datepicker" name="date">   
          </div>
         </div> -->
-
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <label for="City">Cidade:</label>
-            <input type="text" class="form-control" name="city" id="cidade">
-          </div>
-        </div>
-         
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+        <div class="row justify-content-md-center">
+          <div class="form-group col-md-3">
             <label for="State">Estado:</label>
             <input type="text" class="form-control" name="state" id="uf">
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-7">
             <label for="Reference">Ponto de Referência:</label>
             <input type="text" class="form-control" name="reference">
           </div>
         </div>
-        
         <!-- <form id="demo">
           <input type="text" name="latitude" id="latitude">
           <input type="text" name="longitude" id="longitude">
@@ -191,25 +166,17 @@ function mascara(id, mask){
 
         <button onclick="getLocation()"></button> -->
 
-
-
-        <div class="row" id="demo">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+        <div class="row justify-content-md-center" >
+          <div class="form-group col-md-3">
             <label for="Latitude">Latitude:</label>
-            <input type="text" class="form-control" name="latitude" id="latitude">
+            <input  type="text" class="form-control" name="latitude" id="latitude">
           </div>
-        </div>
-
-        <div class="row" id="demo">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
+           <div class="form-group col-md-7">
             <label for="Longitude">Longitude:</label>
             <input type="text" class="form-control" name="longitude" id="longitude"><br>
-            <a class="btn btn-info" style="margin-left:40px" onclick="getLocation()" id="demo">Buscar Latitude e Longitude</a>
+            <a class="btn btn-info" onclick="getLocation()" >Atualizar Localização</a>
           </div>
         </div>
-        
 
         <div class="row">
           <div class="col-md-4"></div>
@@ -276,6 +243,7 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+window.onload = getLocation;
 
 function showPosition(position) {
     // x.innerHTML = position.coords.latitude;

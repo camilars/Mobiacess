@@ -72,7 +72,7 @@ class LocalController extends Controller
         $local->foto=$name;
         $local->save();
         
-        return redirect('locals')->with('success', 'Local Cadastrado Com Sucesso');
+        return redirect('mapa')->with('success', 'Local Cadastrado Com Sucesso');
 
     }
 

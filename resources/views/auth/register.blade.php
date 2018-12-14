@@ -128,7 +128,7 @@ function validarCPF(el){
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder ="Nome" required autofocus >
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder ="Digite seu nome" required autofocus >
 
                                 @if ($errors->has('nome'))
                                     <span class="invalid-feedback" role="alert">
@@ -142,7 +142,7 @@ function validarCPF(el){
                             <label for="cpf" class="col-md-4 col-form-label text-md-right">{{ __('CPF') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder ="Cpf" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
+                                <input id="cpf" type="text" class="form-control{{ $errors->has('cpf') ? ' is-invalid' : '' }}" name="cpf" value="{{ old('cpf') }}" placeholder ="Digite apenas números" required autofocus maxlength="14" onblur="validarCPF(this)" onkeypress="return mask(event, this, '###.###.###-##')">
 
                                 @if ($errors->has('cpf'))
                                     <span class="invalid-feedback" role="alert">
@@ -156,7 +156,7 @@ function validarCPF(el){
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder ="E-mail" required 
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder ="tuanno@gmail.com" required 
                                 autofocus onblur="validacaoEmail(f1.email)">
 
                                 @if ($errors->has('e-mail'))
@@ -171,7 +171,7 @@ function validarCPF(el){
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder ="Senha" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder ="Quantidade minima 6" required>
 
                                 @if ($errors->has('senha'))
                                     <span class="invalid-feedback" role="alert">
