@@ -26,7 +26,8 @@ div.card-body{
 }
 
 div#card-login.card{
-  padding-left:-10%; 
+  padding-left:-10%;
+  border-radius:30px; 
 }
 
 label#email{
@@ -73,8 +74,29 @@ label#senha{
 }
 
 #butcad{
-  
+    
 }
+
+#card-register{
+  border-radius: 30px;
+}
+
+
+/*Formulário de cadastro dos locais*/
+
+#butlocalização{
+  border-radius: 30px;
+}
+
+#butcadastrar{
+  border-radius: 30px; 
+}
+
+#butcancelar{
+  border-radius: 30px;
+}
+
+
 
 
 body{
@@ -164,7 +186,7 @@ input[type="submit"].login{
   color: #fff;
   font-weight: bold;
 }
-input[type="submit"].login:hover{background-color: #fff; border:1px solid #55b1df; color:#55b1df; cursor:pointer;}
+input[type="submit"].login:hover{background-color: #3490dc; border:1px solid #55b1df; color:#fff; cursor:pointer;}
 input[type="submit"].login:focus{outline: none;}
 
 #card-login {

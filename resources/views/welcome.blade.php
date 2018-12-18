@@ -79,32 +79,50 @@
                     <li>
                      <a class="page-scroll" href="#about">Sobre</a>
                    </li>
-                    <li>
+                   <li>
                      <a class="page-scroll" href="#team">Equipe</a>
                    </li>
-                   <li>        
+                   <!-- <li>        
                     <a class="page-scroll" href="#portfolio">Portfolio</a>
-                  </li>
+                  </li> -->
                   <li>
                     <a class="page-scroll" href="#contact">Contatos</a>
                   </li>
-
+                  @guest
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Acessar<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href="{{ route('login') }}">Entrar</a></li>
                       <li><a href="{{ route('register') }}">Cadastre-se</a></li>
                     </ul> 
                   </li>
-            </ul>
-          </div>
-          <!-- navbar-collapse -->
-        </nav>
-        <!-- END: Navigation -->
+                  @else
+                  <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      <i class="fa fa-street-view" style="font-size:20;"></i> {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" style="background-color:#000000;" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      {{ __('Sair') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                    </form>
+                  </div>
+                </li>
+                @endguest
+              </ul>
+            </div>
+            <!-- navbar-collapse -->
+          </nav>
+          <!-- END: Navigation -->
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- header-area end -->
+  <!-- header-area end -->
 </header>
 <!-- header end -->
 
@@ -261,99 +279,97 @@
         </div>
       </div>
     </div>
-        <!-- End column -->
-        <div class="col-md-3 col-sm-3 col-xs-12">
-          <div class="single-team-member">
-            <div class="team-img">
-              <a href="#">
-                <img src="img/team/2.jpg" alt="">
-              </a>
-              <div class="team-social-icon text-center">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="team-content text-center">
-              <h4>Leonardo</h4>
-              <p>Desenvolvedor Web</p>
-            </div>
+    <!-- End column -->
+    <div class="col-md-3 col-sm-3 col-xs-12">
+      <div class="single-team-member">
+        <div class="team-img">
+          <a href="#">
+            <img src="img/team/2.jpg" alt="">
+          </a>
+          <div class="team-social-icon text-center">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- End column -->
-        <div class="col-md-3 col-sm-3 col-xs-12">
-          <div class="single-team-member">
-            <div class="team-img">
-              <a href="#">
-                <img src="img/team/3.jpg" alt="">
-              </a>
-              <div class="team-social-icon text-center">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="team-content text-center">
-              <h4>Camila</h4>
-              <p>Desenvolvedor Web</p>
-            </div>
-          </div>
+        <div class="team-content text-center">
+          <h4>Leonardo</h4>
+          <p>Desenvolvedor Web</p>
         </div>
-        <!-- End column -->
-        <div class="col-md-3 col-sm-3 col-xs-12">
-          <div class="single-team-member">
-            <div class="team-img">
-              <a href="#">
-                <img src="img/team/4.jpg" alt="">
-              </a>
-              <div class="team-social-icon text-center">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-instagram"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="team-content text-center">
-              <h4>Tuanno</h4>
-              <p>Desenvolvedor Web</p>
-            </div>
-          </div>
-        </div>
-        <!-- End column -->
       </div>
     </div>
+    <!-- End column -->
+    <div class="col-md-3 col-sm-3 col-xs-12">
+      <div class="single-team-member">
+        <div class="team-img">
+          <a href="#">
+            <img src="img/team/3.jpg" alt="">
+          </a>
+          <div class="team-social-icon text-center">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="team-content text-center">
+          <h4>Camila</h4>
+          <p>Desenvolvedor Web</p>
+        </div>
+      </div>
+    </div>
+    <!-- End column -->
+    <div class="col-md-3 col-sm-3 col-xs-12">
+      <div class="single-team-member">
+        <div class="team-img">
+          <a href="#">
+            <img src="img/team/4.jpg" alt="">
+          </a>
+          <div class="team-social-icon text-center">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="team-content text-center">
+          <h4>Tuanno</h4>
+          <p>Desenvolvedor Web</p>
+        </div>
+      </div>
+    </div>
+    <!-- End column -->
   </div>
 </div>
-<!-- End reviews Area -->
+</div>
+</div>
 
-<!-- Start portfolio Area -->
-<div id="portfolio" class="portfolio-area area-padding fix">
+<!-- <div id="portfolio" class="portfolio-area area-padding fix">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -363,7 +379,7 @@
       </div>
     </div>
     <div class="row">
-      <!-- Start Portfolio -page -->
+   
       <div class="awesome-project-1 fix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="awesome-menu ">
@@ -382,7 +398,7 @@
         </div>
       </div>
       <div class="awesome-project-content">
-        <!-- single-awesome-project start -->
+  
         <div class="col-md-4 col-sm-4 col-xs-12 design">
           <div class="single-awesome-project">
             <div class="awesome-img">
@@ -398,8 +414,7 @@
             </div>
           </div>
         </div>
-        <!-- single-awesome-project end -->
-        <!-- single-awesome-project start -->
+        
         <div class="col-md-4 col-sm-4 col-xs-12 photo development">
           <div class="single-awesome-project">
             <div class="awesome-img">
@@ -415,8 +430,7 @@
             </div>
           </div>
         </div>
-        <!-- single-awesome-project end -->
-        <!-- single-awesome-project start -->
+        
         <div class="col-md-4 col-sm-4 col-xs-12 development">
           <div class="single-awesome-project">
             <div class="awesome-img">
@@ -432,8 +446,7 @@
             </div>
           </div>
         </div>
-        <!-- single-awesome-project end -->
-        <!-- single-awesome-project start -->
+       
         <div class="col-md-4 col-sm-4 col-xs-12 photo development">
           <div class="single-awesome-project">
             <div class="awesome-img">
@@ -449,11 +462,11 @@
             </div>
           </div>
         </div>
-        <!-- single-awesome-project end -->
+       
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- End Blog -->
 <!-- Start Suscrive Area -->
 <div class="suscribe-area">
@@ -461,7 +474,7 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
         <div class="suscribe-text text-center">
-          <h3>bem-vindo a nosso site Mobiacess</h3>
+          <h3></h3>
         </div>
       </div>
     </div>
@@ -500,10 +513,10 @@
               <p>
                 Email: leonardo.alves779@gmail.com<br>
               </p>
-               <p>
+              <p>
                 Email: tuannodanyllo26@gmail.com<br>
               </p>
-               <p>
+              <p>
                 Email: camila.rs122@gmail.com<br>
               </p>
             </div>
@@ -522,87 +535,85 @@
           </div>
         </div>
       </div>
-<!-- End Contact Area -->
+      <!-- End Contact Area -->
 
-<!-- Start Footer bottom Area -->
-<footer>
-  <div class="footer-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="footer-content">
-            <div class="footer-head">
-              <div class="footer-logo">
-                <h2><span>M</span>obiacess</h2>
+      <!-- Start Footer bottom Area -->
+      <footer>
+        <div class="footer-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-content">
+                  <div class="footer-head">
+                    <div class="footer-logo">
+                      <h2><span>M</span>obiacess</h2>
+                    </div>
+
+                    <p>Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes,mostrando no mapa as melhores pontos e seus tipos de acessibilidade.</p>
+                    <div class="footer-icons">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-google"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <p>Mobiacess é uma aplicação que vai ajudar na locomoção dos cadeirantes,mostrando no mapa as melhores pontos e seus tipos de acessibilidade.</p>
-              <div class="footer-icons">
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                  </li>
-                </ul>
+              <!-- end single footer -->
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-content">
+                  <div class="footer-head">
+                    <h4>Informações</h4>
+                    <div class="footer-contacts">
+                      <p><span>Email: </span>mobiacess2018@gmail.com</p>
+                      <p><span>Horas de Trabalho: </span>09:00 - 17:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end single footer -->
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-content">
+                  <div class="footer-head">
+                    <h4>Instagram</h4>
+                    <div class="flicker-img">
+                      <img src="img/portfolio/1.jpg" width="40%", height="30%">
+                      <img src="img/portfolio/2.jpg" width="40%", height="30%">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- end single footer -->
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="footer-content">
-            <div class="footer-head">
-              <h4>Informação</h4>
-              <div class="footer-contacts">
-                <p><span>Email:</span>mobiacess2018@gmail.com</p>
-                <p><span>Horas de Trabalho:</span>09:00-17:00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end single footer -->
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <div class="footer-content">
-            <div class="footer-head">
-              <h4>Instagram</h4>
-              <div class="flicker-img">
-                <a href="#"><img src="img/portfolio/1.jpg" alt=""></a>
-                <a href="#"><img src="img/portfolio/2.jpg" alt=""></a>
-                <a href="#"><img src="img/portfolio/3.jpg" alt=""></a>
-                <a href="#"><img src="img/portfolio/4.jpg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </footer>
+      </footer>
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/knob/jquery.knob.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/parallax/parallax.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-  <script src="lib/appear/jquery.appear.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+      <!-- JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <script src="lib/venobox/venobox.min.js"></script>
+      <script src="lib/knob/jquery.knob.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/parallax/parallax.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+      <script src="lib/appear/jquery.appear.js"></script>
+      <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+      <!-- Contact Form JavaScript File -->
+      <script src="contactform/contactform.js"></script>
 
-  <script src="js/main.js"></script>
-</body>
+      <script src="js/main.js"></script>
+    </body>
 
-</html>
+    </html>

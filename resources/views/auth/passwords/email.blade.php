@@ -33,14 +33,14 @@
 
                         <div class="form-group row mb-0" style="margin-left:280px;">
                             <!-- <div class="col-md-6 offset-md-4"> -->
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" id="butcancelar">
                                     {{ __('Recuperar Senha') }}
                                 </button>
                             </div>
                         </div>
     
                         <!-- <div> -->
-                            <a href="{{action('HomeController@index')}}"><button type="submit" class="btn btn-danger" style="margin-top:-99px; margin-left:460px;">Cancelar</button></a>
+                            <a href="{{action('HomeController@index')}}"><button type="submit" id="butcancelar" class="btn btn-danger" style="margin-top:-99px; margin-left:460px;">Cancelar</button></a>
                         </div>    
 
                     </form>

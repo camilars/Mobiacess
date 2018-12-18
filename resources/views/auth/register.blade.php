@@ -110,7 +110,7 @@ function validarCPF(el){
 }
 </script>
 
-<div class="container"><br><br><br>
+<div class="container">
     <div class="row justify-content-center">
         <div id="formWrapper">
             <div id="form">
@@ -131,8 +131,8 @@ function validarCPF(el){
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder ="Digite seu nome" required autofocus >
 
                                 @if ($errors->has('nome'))
-                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('nome') }}</strong>
+                                    <span class="invalid-feedback" role="alert">
                                     </span>
                                 @endif
                             </div>
@@ -156,7 +156,7 @@ function validarCPF(el){
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder ="tuanno@gmail.com" required 
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder ="exemplo@gmail.com" required 
                                 autofocus onblur="validacaoEmail(f1.email)">
 
                                 @if ($errors->has('e-mail'))
@@ -171,7 +171,7 @@ function validarCPF(el){
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder ="Quantidade minima 6" required>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Quantidade mínima 6 caracteres" required>
 
                                 @if ($errors->has('senha'))
                                     <span class="invalid-feedback" role="alert">

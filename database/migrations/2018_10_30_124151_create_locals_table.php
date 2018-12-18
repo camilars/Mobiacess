@@ -15,6 +15,8 @@ class CreateLocalsTable extends Migration
     {
         Schema::create('locals', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->string('NameOfLocal');
             $table->string('street');
             $table->string('burgh');

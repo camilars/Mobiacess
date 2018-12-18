@@ -45,6 +45,6 @@
 	 </script>
 <!-- how to make a marker in google maps with ajax in laravel -->
 
-
 @endsection
+
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class LocalController extends Controller
 {
@@ -13,7 +14,9 @@ class LocalController extends Controller
      */
     public function index()
     {
-       $locals=\App\Local::all();
+        $id = Auth::id();
+        $locals = \App\Local::where('id',$id)->get();
+        //return view ('home' , compact('userslocal'));
         return view('local/index_local',compact('locals'));
     }
 
@@ -46,6 +49,7 @@ class LocalController extends Controller
          $acessibilidade = '';
 
         $local= new \App\Local;
+        $local->id_user=Auth::user()->id;
         $local->NameOfLocal=$request->get('NameOfLocal');
         $local->street=$request->get('street');
         $local->burgh=$request->get('burgh');
@@ -82,9 +86,11 @@ class LocalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $id = Auth::id();
+        $userslocal = \App\Users::where('id',$id)->get();
+        return view ('locals' , compact('userslocal'));
     }
 
     /**
