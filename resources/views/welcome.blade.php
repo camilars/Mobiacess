@@ -500,7 +500,7 @@
             <div class="single-icon">
               <i class="fa fa-mobile"></i>
               <p>
-                <span>Segunda-Sexta(9:00-17:00)</span>
+                <span>Segunda - Sexta(9:00 - 17:00)</span>
               </p>
             </div>
           </div>

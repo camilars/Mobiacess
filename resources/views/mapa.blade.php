@@ -28,11 +28,11 @@
 
 			var map=new google.maps.Map(document.getElementById('map'), options);
 			 <?php foreach ($locals as $local): ?>
-				
-			new google.maps.Marker	({
+			var markerImage = 'img/cadeirante.png'; 
+       		new google.maps.Marker	({
 				position: { lat: {{$local->latitude}}, lng:{{$local->longitude}} },
 				map:map,
-				icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+				icon:markerImage
 			});
 
 			<?php endforeach ?> 

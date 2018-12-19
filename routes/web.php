@@ -32,7 +32,7 @@ Auth::routes();
 Route::get('/home', 'LocalController@loadmap')->name('home');
 
 // Rota abaixo criada pra funcionar o cadastro de usuários
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'LocalController@loadmap')->name('mapa');
 
 Route::get('/mapa', 'LocalController@loadmap')->name('mapa');
 
