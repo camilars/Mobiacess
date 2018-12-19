@@ -15,7 +15,7 @@ class LocalController extends Controller
     public function index()
     {
         $id = Auth::id();
-        $locals = \App\Local::where('id',$id)->get();
+        $locals = \App\Local::where('id_user',$id)->get();
         //return view ('home' , compact('userslocal'));
         return view('local/index_local',compact('locals'));
     }
@@ -60,13 +60,13 @@ class LocalController extends Controller
         $local->latitude=$request->get('latitude');
         $local->longitude=$request->get('longitude');
         if (!empty($request->get('rampa'))) {
-            $acessibilidade .= $request->get('rampa') . ",";
+            $acessibilidade .= $request->get('rampa').', ';
         }
         if (!empty($request->get('corrimao'))) {
-            $acessibilidade .= $request->get('corrimao') . ",";
+            $acessibilidade .= $request->get('corrimao').', ';
         }
         if (!empty($request->get('elevador'))) {
-            $acessibilidade .= $request->get('elevador') . ",";
+            $acessibilidade .= $request->get('elevador').', ';
         }
         if (!empty($request->get('nenhuma'))) {
             $acessibilidade = $request->get('nenhuma');

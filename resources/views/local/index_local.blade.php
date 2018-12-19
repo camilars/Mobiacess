@@ -29,6 +29,7 @@
       
       @foreach($locals as $local)
       
+     
       <tr>
         <td>{{$local['NameOfLocal']}}</td>
         <td>{{$local['cep']}}</td>

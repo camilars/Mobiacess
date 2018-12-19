@@ -71,6 +71,7 @@
 
   <!-- Nivo Slider Theme -->
   <link href="/css/nivo-slider-theme.css" rel="stylesheet">
+  <link href="lib/jquery/jquery.min.js" rel="stylesheet">
 
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>

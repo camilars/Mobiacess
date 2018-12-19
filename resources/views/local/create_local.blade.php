@@ -190,10 +190,10 @@ function mascara(id, mask){
         <div class="row justify-content-md-center">
           <div class="form-group col-md-4">
             <label for="Reference">Acessibilidades:</label><br>
-            <input type="checkbox" name="rampa" value="rampa" > Rampa<br>
-            <input type="checkbox" name="elevador" value="elevador" > Elevador<br>
-            <input type="checkbox" name="corrimao" value="corrimao" > Corrimão<br>
-            <input type="checkbox" name="nenhuma" value="nenhuma" > Nenhuma acessibilidade<br>
+            <input class="disabled" type="checkbox" name="rampa" value="Rampa"> Rampa<br>
+            <input class="disabled" type="checkbox" name="elevador" value="Elevador" > Elevador<br>
+            <input class="disabled" type="checkbox" name="corrimao" value="Corrimão" > Corrimão<br>
+            <input class="disabled" type="checkbox" name="nenhuma" value="Nenhuma acessibilidade" > Nenhuma acessibilidade<br>
           </div>
         </div>
 
@@ -251,6 +251,28 @@ function showPosition(position) {
     a.value = position.coords.latitude; 
     b.value = position.coords.longitude;
 }
+
+// function setDisabled(state){
+//   $('.disabled, select, checkbox').each(function(){
+//      $(this).prop("disabled", state);
+//   });
+// }
+
+// function verificarCheckBox() {
+//     var check = document.getElementsByName("Rampa"); 
+
+//     for (var i=0;i<check.length;i++){ 
+//         if (check[i].checked == true){ 
+//             var check1 = document.getElementsByName("Nenhuma acessibilidade");
+//             check1.setDisabled(true);
+
+//         }  else {
+//            // CheckBox Não Marcado... Faça alguma outra coisa...
+            
+//         }
+//     }
+// }
+
 </script>
 
 @endsection

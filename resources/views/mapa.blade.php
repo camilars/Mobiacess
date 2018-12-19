@@ -27,13 +27,43 @@
 			}
 
 			var map=new google.maps.Map(document.getElementById('map'), options);
+      var markers = [];
+      var marker;
+      var contentString;
+      var infowindow;
+      var markerImage = 'img/cadeirante.png'; 
+
 			 <?php foreach ($locals as $local): ?>
-			var markerImage = 'img/cadeirante.png'; 
-       		new google.maps.Marker	({
+			 		 contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h4 id="firstHeading" class="firstHeading">Acessibilidades do local</h4>'+
+            '<div id="bodyContent">'+
+            '<h5>{{$local->acessibilidade}}</h5>'+
+            '</div>'+
+            '</div>';
+
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 200
+        });
+
+			
+      marker = new google.maps.Marker	({
 				position: { lat: {{$local->latitude}}, lng:{{$local->longitude}} },
 				map:map,
 				icon:markerImage
 			});
+
+      google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+      return function() {
+        infowindow.setContent(content);
+        infowindow.open(map,marker);
+       };
+       })(marker,contentString,infowindow));  
+      
+
+       		
 
 			<?php endforeach ?> 
 		}
