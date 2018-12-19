@@ -65,8 +65,17 @@ class LocalController extends Controller
         if (!empty($request->get('corrimao'))) {
             $acessibilidade .= $request->get('corrimao').', ';
         }
+        if (!empty($request->get('portas'))) {
+            $acessibilidade .= $request->get('portas').', ';
+        }
         if (!empty($request->get('elevador'))) {
             $acessibilidade .= $request->get('elevador').', ';
+        }
+        if (!empty($request->get('banheiro'))) {
+            $acessibilidade .= $request->get('banheiro').', ';
+        }
+        if (!empty($request->get('circulacao'))) {
+            $acessibilidade .= $request->get('circulacao').', ';
         }
         if (!empty($request->get('nenhuma'))) {
             $acessibilidade = $request->get('nenhuma');

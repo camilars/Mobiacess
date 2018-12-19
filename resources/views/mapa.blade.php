@@ -1,3 +1,5 @@
+<link href="img/iconic.png" rel="icon">
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <style>
 		#map{
@@ -31,15 +33,15 @@
       var marker;
       var contentString;
       var infowindow;
-      var markerImage = 'img/cadeirante.png'; 
+      var markerImage = 'img/iconecadeira.png'; 
 
 			 <?php foreach ($locals as $local): ?>
 			 		 contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h4 id="firstHeading" class="firstHeading">Acessibilidades do local</h4>'+
+            '<h5 id="firstHeading" class="firstHeading">Acessibilidades no local</h5>'+
             '<div id="bodyContent">'+
-            '<h5>{{$local->acessibilidade}}</h5>'+
+            '<h6>{{$local->acessibilidade}}</h6>'+
             '</div>'+
             '</div>';
 

@@ -3,7 +3,6 @@
 @section('content')
 
 <!-- Script do cep -->
-
  <script type="text/javascript" >
     
     function limpa_formulário_cep() {
@@ -110,36 +109,36 @@ function mascara(id, mask){
 }
 </script>
 
-    <div class="container"><br><br><br>
-      <h2><center>Cadastro de Local</center></h2><br/>
+    <div class="container">
+      <h2><center>Cadastrar Local</center></h2><br/>
       <form method="post" action="{{url('locals')}}" enctype="multipart/form-data">
         @csrf
         <div class="row justify-content-md-center">
           <div class="form-group col-md-10">
             <label for="NameOfLocal">Nome do Local:</label>
-            <input type="text" class="form-control" name="NameOfLocal" required="">
+            <input type="text" class="form-control" name="NameOfLocal" required="" placeholder="Exemplo: Câmara Municipal de Vereadores">
           </div>
         </div>
 
         <div class="row justify-content-md-center">
           <div class="form-group col-md-3">
             <label for="Cep">Cep:</label>
-            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9" onkeypress="return mask(event, this, '#####-###')" required="">
+            <input type="text" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" maxlength="9" onkeypress="return mask(event, this, '#####-###')" required="" placeholder="Somente números">
           </div>
           <div class="form-group col-md-7">
               <label for="Street">Rua:</label>
-              <input type="text" class="form-control" name="street" id="rua" required="">
+              <input type="text" class="form-control" name="street" id="rua" required="" placeholder="Exemplo: Rua do meio">
             </div>
         </div>
         
         <div class="row justify-content-md-center">
             <div class="form-group col-md-3">
               <label for="Burgh">Bairro:</label>
-              <input type="text" class="form-control" name="burgh" id="bairro" required="">
+              <input type="text" class="form-control" name="burgh" id="bairro" required="" placeholder="Exemplo: Centro">
             </div>
             <div class="form-group col-md-7">
              <label for="City">Cidade:</label>
-              <input type="text" class="form-control" name="city" id="cidade" required="">
+              <input type="text" class="form-control" name="city" id="cidade" required="" placeholder="Cidade">
             </div>
           </div>
         <!-- <div class="row">
@@ -152,11 +151,11 @@ function mascara(id, mask){
         <div class="row justify-content-md-center">
           <div class="form-group col-md-3">
             <label for="State">Estado:</label>
-            <input type="text" class="form-control" name="state" id="uf" required="">
+            <input type="text" class="form-control" name="state" id="uf" required="" placeholder="Estado">
           </div>
           <div class="form-group col-md-7">
             <label for="Reference">Ponto de Referência:</label>
-            <input type="text" class="form-control" name="reference" required="">
+            <input type="text" class="form-control" name="reference" required="" placeholder="Exemplo: Próximo ao parque">
           </div>
         </div>
         <!-- <form id="demo">
@@ -169,11 +168,11 @@ function mascara(id, mask){
         <div class="row justify-content-md-center" >
           <div class="form-group col-md-3">
             <label for="Latitude">Latitude:</label>
-            <input  type="text" class="form-control" name="latitude" id="latitude" required="">
+            <input  type="text" class="form-control" name="latitude" id="latitude" required="" placeholder="Latitude">
           </div>
            <div class="form-group col-md-7">
             <label for="Longitude">Longitude:</label>
-            <input type="text" class="form-control" name="longitude" id="longitude"><br>
+            <input type="text" class="form-control" name="longitude" id="longitude" placeholder="Longitude"><br>
             <a class="btn btn-info" onclick="getLocation()" id="butlocalização" required="">Atualizar Localização</a>
           </div>
         </div>
@@ -190,23 +189,26 @@ function mascara(id, mask){
         <div class="row justify-content-md-center">
           <div class="form-group col-md-4">
             <label for="Reference">Acessibilidades:</label><br>
-            <input class="disabled" type="checkbox" name="rampa" value="Rampa"> Rampa<br>
-            <input class="disabled" type="checkbox" name="elevador" value="Elevador" > Elevador<br>
+            <input class="disabled" type="checkbox" name="rampa" value="Rampa"> Rampas<br>
             <input class="disabled" type="checkbox" name="corrimao" value="Corrimão" > Corrimão<br>
-            <input class="disabled" type="checkbox" name="nenhuma" value="Nenhuma acessibilidade" > Nenhuma acessibilidade<br>
+            <input class="disabled" type="checkbox" name="portas" value="Portas e corredores largos" > Portas e corredores largos<br>
+            <input class="disabled" type="checkbox" name="elevador" value="Elevadores amplos" > Elevadores amplos<br>
+            <input class="disabled" type="checkbox" name="banheiro" value="Banheiros adaptados" > Banheiros adaptados<br>
+            <input class="disabled" type="checkbox" name="circulacao" value="Boa área de circulação" > Boa área de circulação<br>
+            <input class="disabled" type="checkbox" name="nenhuma" value="Nenhum tipo de acessibilidade" > Nenhum tipo de acessibilidade<br>
           </div>
         </div>
 
         <div class="row justify-content-md-center">
-          <div class="form-group col-md-4" style="margin-top:20px">
+          <div class="form-group col-md-4" style="margin-top:8px">
             <button type="submit" class="btn btn-success" style="margin-left:60px" id="butcadastrar">Cadastrar</button>
           </div>
         </div>
     </div>
 
     <div class="row justify-content-md-center">
-          <div class="form-group col-md-2" style="margin-top:-52px; margin-left:300px">
-            <a href="{{action('LocalController@index')}}"><button type="submit"  class="btn btn-danger" id="butcancelar">Cancelar</button></a>
+          <div class="form-group col-md-2" style="margin-top:-54px; margin-left:300px">
+            <a href="{{action('LocalController@loadmap')}}"><button type="submit"  class="btn btn-danger" id="butcancelar">Cancelar</button></a>
           </div>
         </div>
       </form>

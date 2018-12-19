@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link href="img/iconic.png" rel="icon">
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">

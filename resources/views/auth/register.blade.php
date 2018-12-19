@@ -201,7 +201,7 @@ function validarCPF(el){
     
                         <!-- <div class="form-group row mb-0" id="cancelar" style="margin-right:-60%; margin-top:-37px;  "> -->
                             <div class="col-md-4 offset-md-4">
-                                <a href="{{action('HomeController@index')}}" style="border-radius:22px; margin-left:100%; margin-top:-41%;" class="btn btn-danger">Cancelar</a>
+                                <a href="{{action('LocalController@loadmap')}}" style="border-radius:22px; margin-left:100%; margin-top:-41%;" class="btn btn-danger">Cancelar</a>
                             </div>    
                         </div>
                     </form>
