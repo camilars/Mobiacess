@@ -178,15 +178,13 @@ function mascara(id, mask){
               <input type="file" name="foto" value="{{$local->foto}}" required="">    
             </div>
           </div>
-        <div class="row" style="margin-left:284px">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4" style="margin-top:60px">
+        <div class="row" style="margin-left:25%;">
+            <div class="form-group col-md-4" style="margin-top:-2%;">
               <button type="submit" class="btn btn-success" id="butcancelar" onclick="return confirm('Atualizar os dados alterados?')">Atualizar</button>
             </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-          <div class="form-group col-md-4" style="margin-top:-53px; margin-left:922px";>
+          <div class="form-group col-md-4" style="margin-top:-3%; margin-left:60%;";>
             <a href="{{action('LocalController@index')}}"><button type="submit" id="butcancelar" class="btn btn-danger">Cancelar</button></a>
           </div>
       </div>

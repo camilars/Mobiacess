@@ -179,7 +179,7 @@ function mascara(id, mask){
 
         <div class="row justify-content-md-center">
           <div class="form-group col-md-4">
-            <label>Imagem do Local:</label>
+            <label for="Imagem">Imagem do Local:</label>
             <input style="border-radius: 40px;" type="file" name="foto" required="">    
 
             <img id='img-upload'/>

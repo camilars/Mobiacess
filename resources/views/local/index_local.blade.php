@@ -38,14 +38,14 @@
         <td>{{$local['city']}}</td>
         <td>{{$local['state']}}</td>
         <td>{{$local['reference']}}</td>
-        <td><img src="/images/{{$local['foto']}}" style="width:70px; height:70px;  "></td>
+        <td><img src="/images/{{$local['foto']}}" style="width:70px; height:70px;"></td>
         <td>{{$local['acessibilidade']}}</td>
-        <td><a href="{{action('LocalController@edit', $local['id'])}}" id="butcancelar" class="btn btn-warning">Editar</a></td>
+        <td><a href="{{action('LocalController@edit', $local['id'])}}"  id="butcancelar"  class="btn btn-warning"><i class="fa fa-pencil" style="font-size:20px"></i>Editar</a></td>
         <td>
           <form action="{{action('LocalController@destroy', $local['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
-            <button class="btn btn-danger" type="submit" id="butcancelar" onclick="return confirm('Tem certeza que deseja excluir?')">Deletar</button>
+            <button class="btn btn-danger" type="submit" id="butcancelar"  onclick="return confirm('Tem certeza que deseja excluir?')"><i class="fa fa-times" style="font-size:20px"></i>Deletar</button>
           </form>
         </td>
       </tr>

@@ -9,7 +9,7 @@
 
   <!-- Favicons -->
   <link href="img/iconic.png" rel="icon">
-  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="img/aiconic.pngpple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
@@ -65,16 +65,13 @@
                   </button>
                   <!-- Brand -->
                   <a class="navbar-brand page-scroll sticky-logo" href="index.php">
-                    
-                    <h1><span>M</span>obiacess</h1>
-                    
+                    <img src=""><h1><span>M</span>obiacess</h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <img src="img/logo.png" alt="" title=""> -->
                   </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-
                   <ul class="nav navbar-nav navbar-right">
                     <li class="active">
                       <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
@@ -83,7 +80,7 @@
                      <a class="page-scroll" href="#about">Sobre</a>
                    </li>
                    <li>
-                     <!-- <a class="page-scroll" href="#team">Equipe</a> -->
+                     <a class="page-scroll" href="#team">Equipe</a>
                    </li>
                    <!-- <li>        
                     <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -154,7 +151,7 @@
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <!-- <a class="ready-btn page-scroll" href="#team">Equipe</a> -->
+                <a class="ready-btn page-scroll" href="#team">Equipe</a>
                 <a class="ready-btn page-scroll" href="#about">Sobre</a>
               </div>
             </div>
@@ -179,7 +176,7 @@
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <!-- <a class="ready-btn page-scroll" href="#team">Equipe</a> -->
+                <a class="ready-btn page-scroll" href="#team">Equipe</a>
                 <a class="ready-btn page-scroll" href="#about">Sobre</a>
               </div>
             </div>
@@ -203,7 +200,7 @@
               </div>
               <!-- layer 3 -->
               <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                <!-- <a class="ready-btn page-scroll" href="#team">Equipe</a> -->
+                <a class="ready-btn page-scroll" href="#team">Equipe</a>
                 <a class="ready-btn page-scroll" href="#about">Sobre</a>
               </div>
             </div>
@@ -273,7 +270,7 @@
 <!-- End Wellcome Area -->
 
 <!-- Start team Area -->
-<!-- <div id="team" class="our-team-area area-padding">
+<div id="team" class="our-team-area area-padding">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -282,7 +279,7 @@
         </div>
       </div>
     </div>
-    
+    <!-- End column -->
     <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="single-team-member">
         <div class="team-img">
@@ -310,7 +307,7 @@
         </div>
       </div>
     </div>
-    
+    <!-- End column -->
     <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="single-team-member">
         <div class="team-img">
@@ -338,7 +335,7 @@
         </div>
       </div>
     </div>
-    
+    <!-- End column -->
     <div class="col-md-3 col-sm-3 col-xs-12">
       <div class="single-team-member">
         <div class="team-img">
@@ -366,12 +363,12 @@
         </div>
       </div>
     </div>
-    
+    <!-- End column -->
   </div>
 </div>
 </div>
 </div>
- -->
+
 <!-- <div id="portfolio" class="portfolio-area area-padding fix">
   <div class="container">
     <div class="row">
@@ -503,7 +500,7 @@
             <div class="single-icon">
               <i class="fa fa-mobile"></i>
               <p>
-                <span>Segunda - Sexta (9:00 - 17:00)</span>
+                <span>Segunda - Sexta(9:00 - 17:00)</span>
               </p>
             </div>
           </div>

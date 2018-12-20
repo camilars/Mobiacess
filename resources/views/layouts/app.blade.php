@@ -116,6 +116,9 @@
                             </li>
                         @else
                             <li class="nav-item">
+                                <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar mapa</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">

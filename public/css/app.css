@@ -88,6 +88,20 @@ label#senha{
   border-radius: 30px;
 }
 
+#butatualizar{
+border-radius: 30px;
+margin-top:2%;
+margin-left:0%;
+
+}
+
+#butvoltar{
+  border-radius: 30px;
+  margin-top:-25%; 
+  margin-left:370%;
+
+}
+
 #butcadastrar{
   border-radius: 30px; 
 }
