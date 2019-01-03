@@ -27,17 +27,13 @@
     </thead>
     <tbody>
       
-      @foreach($locals as $local)
+      @foreach($evaluations as $evaluation)
       
      
       <tr>
-        <td>{{$local['NameOfLocal']}}</td>
-        <td>{{$local['cep']}}</td>
-        <td>{{$local['street']}}</td>
-        <td>{{$local['burgh']}}</td>
-        <td>{{$local['city']}}</td>
-        <td>{{$local['state']}}</td>
-        <td>{{$local['reference']}}</td>
+        <td>{{$evaluation['id']}}</td>
+        <td>{{$evaluation['pontos']}}</td>
+        <td>{{$evaluation['votos']}}</td>
         <td><img src="/images/{{$local['foto']}}" style="width:70px; height:70px;"></td>
         <td>{{$local['acessibilidade']}}</td>
         <td><a href="{{action('LocalController@edit', $local['id'])}}"  id="butcancelar"  class="btn btn-warning"><i class="fa fa-pencil" style="font-size:20px"></i>Editar</a></td>
@@ -46,23 +42,6 @@
             @csrf
             <input name="_method" type="hidden" value="DELETE">
             <button class="btn btn-danger" type="submit" id="butcancelar"  onclick="return confirm('Tem certeza que deseja excluir?')"><i class="fa fa-times" style="font-size:20px"></i>Deletar</button>
-            <span class="ratingAverage" data-average="<?php echo $calculo;?>"></span>
-            <span class="article" data-id="<?php echo $id;?>"></span>
-
-            <div class="barra">
-	            <span class="bg"></span>
-	            <span class="stars">
-              <?php for($i=1; $i<=5; $i++):?>
-
-
-              <span class="star" data-vote="<?php echo $i;?>">
-	            <span class="starAbsolute"></span>
-              </span>
-              <?php 
-	              endfor;
-	                echo '</span></div><p class="votos"><span>'.$artigo->votos.'</span> votos</p>';
-                
-              ?>
           </form>
         </td>
       </tr>

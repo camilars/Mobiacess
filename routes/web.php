@@ -16,6 +16,9 @@ Route::resource('accessibles','AccessibleController');
 
 Route::resource('locals','LocalController');
 
+Route::resource('evaluations', 'EvaluationController');
+Route::get('/evaluations', 'EvaluationController@index');
+
 
 Route::get('/', function () {
     return view('welcome');

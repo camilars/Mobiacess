@@ -342,6 +342,7 @@ class ComposerStaticInitf47a78afcb2bc7a06a30098088de7c86
     public static $classMap = array (
         'App\\Accessible' => __DIR__ . '/../..' . '/app/Accessible.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Evaluation' => __DIR__ . '/../..' . '/app/Evaluation.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AccessibleController' => __DIR__ . '/../..' . '/app/Http/Controllers/AccessibleController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -351,6 +352,8 @@ class ComposerStaticInitf47a78afcb2bc7a06a30098088de7c86
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\Local' => __DIR__ . '/../..' . '/app/Http/Controllers/Local.php',
+        'App\\Http\\Controllers\\LocalController' => __DIR__ . '/../..' . '/app/Http/Controllers/LocalController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
