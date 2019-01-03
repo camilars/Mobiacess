@@ -109,6 +109,10 @@
                             <li class="nav-item">
                                 <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="page-scroll" href="{{url('locals')}}">Locais acessíveis</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="page-scroll" href="{{ route('login') }}">{{ __('Entrar') }}</a>
                             </li>

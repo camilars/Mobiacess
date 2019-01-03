@@ -20,9 +20,10 @@
         <th>Ponto de Referência</th>
         <th>Foto</th>
         <th>Acessibilidade</th>
+        @if (Auth::check())
         <th>Outros</th>
-
         <th colspan="2">Action</th>
+        @endif
       </tr>
     </thead>
     <tbody>
@@ -40,31 +41,17 @@
         <td>{{$local['reference']}}</td>
         <td><img src="/images/{{$local['foto']}}" style="width:70px; height:70px;"></td>
         <td>{{$local['acessibilidade']}}</td>
+        @if (Auth::check())
         <td><a href="{{action('LocalController@edit', $local['id'])}}"  id="butcancelar"  class="btn btn-warning"><i class="fa fa-pencil" style="font-size:20px"></i>Editar</a></td>
         <td>
           <form action="{{action('LocalController@destroy', $local['id'])}}" method="post">
             @csrf
             <input name="_method" type="hidden" value="DELETE">
             <button class="btn btn-danger" type="submit" id="butcancelar"  onclick="return confirm('Tem certeza que deseja excluir?')"><i class="fa fa-times" style="font-size:20px"></i>Deletar</button>
-            <span class="ratingAverage" data-average="<?php echo $calculo;?>"></span>
-            <span class="article" data-id="<?php echo $id;?>"></span>
-
-            <div class="barra">
-	            <span class="bg"></span>
-	            <span class="stars">
-              <?php for($i=1; $i<=5; $i++):?>
-
-
-              <span class="star" data-vote="<?php echo $i;?>">
-	            <span class="starAbsolute"></span>
-              </span>
-              <?php 
-	              endfor;
-	                echo '</span></div><p class="votos"><span>'.$artigo->votos.'</span> votos</p>';
-                
-              ?>
+            
           </form>
         </td>
+        @endif
       </tr>
       @endforeach
     </tbody>

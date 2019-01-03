@@ -36,7 +36,13 @@ class EvaluationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $evaluation= new \App\Evaluation;
+        $evaluation->id=$request->get('id');
+        $evaluation->local_id=$request->get('local_id');
+        $evaluation->descricao=$request->get('descricao');
+        $evaluation->save();
+        
+        return redirect('accessibles')->with('success', 'Information has been added');
     }
 
     /**

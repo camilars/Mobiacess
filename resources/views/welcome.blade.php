@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +77,9 @@
                     <li class="active">
                       <a class="page-scroll" href="{{action('LocalController@loadmap')}}">Acessar Mapa</a>
                     </li>
+                  <li class="nav-item">
+                      <a class="page-scroll" href="{{url('locals')}}">Locais acessíveis</a>
+                  </li>
                     <li>
                      <a class="page-scroll" href="#about">Sobre</a>
                    </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use DB; 
 
 class LocalController extends Controller
 {
@@ -97,9 +98,11 @@ class LocalController extends Controller
      */
     public function show()
     {
-        $id = Auth::id();
-        $userslocal = \App\Users::where('id',$id)->get();
-        return view ('locals' , compact('userslocal'));
+        // $id = Auth::id();
+        $locals = \App\Local::all();
+        // dd($locals);
+
+        return view ('local/index_local' , compact('locals'));
     }
 
     /**

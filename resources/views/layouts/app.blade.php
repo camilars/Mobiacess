@@ -122,7 +122,7 @@
                                 <a class="page-scroll" href="{{action('LocalController@create')}}">Cadastrar Local</a>
                             </li>
                             <li class="nav-item">
-                                <a class="page-scroll" href="{{action('LocalController@index')}}">visualizar Local</a>
+                                <a class="page-scroll" href="{{url('locals')}}">visualizar Local</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="page-scroll dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

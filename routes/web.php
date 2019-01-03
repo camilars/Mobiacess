@@ -18,6 +18,9 @@ Route::resource('locals','LocalController');
 
 Route::resource('evaluations', 'EvaluationController');
 Route::get('/evaluations', 'EvaluationController@index');
+Route::get('/locals', 'LocalController@show');
+
+
 
 
 Route::get('/', function () {
